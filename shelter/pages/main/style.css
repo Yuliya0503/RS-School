@@ -14,6 +14,10 @@
 }
 
 /*Variables*/
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   box-sizing: border-box;
   display: block;
@@ -94,6 +98,18 @@
 .navigator__link_a {
   color: #CDCDCD;
   text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.navigator__link_a:hover {
+  color: #FAFAFA;
+}
+
+.active {
+  border-bottom: #F1CDB3 3px solid;
+  padding-bottom: 3px;
+  color: #FAFAFA;
 }
 
 /*Not-only*/
@@ -153,6 +169,13 @@
   border-radius: 100px;
   border: none;
   background-color: #F1CDB3;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #FDDCC4;
+  border: none;
 }
 
 .button__a {
@@ -266,6 +289,13 @@
   border: 2px solid;
   border-color: #F1CDB3;
   border-radius: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.button_arrow:hover {
+  background-color: #FDDCC4;
+  border: none;
 }
 
 .arrow {
@@ -284,6 +314,17 @@
   margin-right: 45px;
   background-color: #FAFAFA;
   border-radius: 9px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.pet:hover {
+  background-color: #FFFFFF;
+}
+
+.pet:hover button {
+  border: none;
+  background-color: #FDDCC4;
 }
 
 .pet__img {
@@ -454,6 +495,10 @@
   margin-bottom: 20px;
 }
 
+.button_donation:hover {
+  background-color: #FDDCC4;
+}
+
 .button__a_donation {
   font-size: 20px;
   line-height: 23px;
@@ -483,7 +528,7 @@
   -moz-background-size: 100%;
   background-size: 100%;
   background-position: center 0;
-  height: 350px;
+  height: 350x;
   box-sizing: border-box;
 }
 

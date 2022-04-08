@@ -21,7 +21,7 @@
 }
 
 .header {
-  height: 120px;
+  height: 111px;
   display: flex;
   justify-content: center;
   background-color: #FFFFFF;
@@ -95,7 +95,7 @@
 .our-friends {
   box-sizing: border-box;
   background-color: #F6F6F6;
-  height: 1334px;
+  height: 1343px;
 }
 
 .our-friends-wrapper {
@@ -103,7 +103,7 @@
   text-align: center;
   align-items: center;
   margin: auto;
-  padding-top: 74px;
+  padding-top: 83px;
   padding-left: 3px;
 }
 

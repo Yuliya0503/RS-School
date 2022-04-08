@@ -29,6 +29,7 @@ $size-pharagraph-s: 12px;
 
 
 $color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
 $color-light-xl: #FFFFFF;
 $color-light-l: #F6F6F6;
 $color-light-s: #FAFAFA;
@@ -39,6 +40,9 @@ $color-dark-xl: #4C4C4C;
 $color-dark-3xl: #292929;
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 .body {
   box-sizing: border-box;
@@ -118,8 +122,21 @@ $color-dark-3xl: #292929;
     &_a {
     color: $color-dark-s;
     text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-light-s;
+
+    }
     }
   }
+}
+
+.active {
+  border-bottom: $color-primary 3px solid;
+  padding-bottom: 3px;
+  color: $color-light-s;
 }
 /*Not-only*/
 
@@ -177,6 +194,12 @@ $color-dark-3xl: #292929;
     border-radius: 100px;
     border: none;
     background-color: $color-primary;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-primary-light;
+      border: none;
+    }
 
     &__a {
       text-decoration: none;
@@ -291,6 +314,12 @@ $color-dark-3xl: #292929;
   border: 2px solid;
   border-color: $color-primary;
   border-radius: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-primary-light;
+    border: none;
+  }
 }
 
 .arrow {
@@ -309,7 +338,16 @@ $color-dark-3xl: #292929;
   margin-right: 45px;
   background-color: $color-light-s;
   border-radius: 9px;
+  transition: 0.5s;
+  cursor: pointer;
 
+  &:hover {
+    background-color: $color-light-xl;
+    & button {
+      border: none;
+      background-color: $color-primary-light;
+    }
+  }
   &__img {
     border-radius: 9px 9px 0px 0px;
   }
@@ -477,6 +515,9 @@ $color-dark-3xl: #292929;
   height: 43px;
   background-color: $color-primary;
   margin-bottom: 20px;
+  &:hover {
+    background-color: $color-primary-light;
+  }
 }
 
 .button__a_donation {
@@ -509,7 +550,7 @@ $color-dark-3xl: #292929;
   -moz-background-size: 100%;
   background-size: 100%;
   background-position: center 0;
-  height: 350px;
+  height: 350x;
   box-sizing: border-box;
 
   &-wrapper {
