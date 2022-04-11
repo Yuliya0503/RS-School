@@ -102,6 +102,11 @@ html {
   }
 }
 
+.header-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .navigator {
   &__wrapper {
     display: flex;
