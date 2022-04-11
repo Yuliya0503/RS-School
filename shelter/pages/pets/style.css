@@ -14,6 +14,10 @@
 }
 
 /*Variables*/
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   box-sizing: border-box;
   display: block;
@@ -25,6 +29,8 @@
   display: flex;
   justify-content: center;
   background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
 }
 
 .header-wrapper {
@@ -69,6 +75,11 @@
   margin-top: 8px;
 }
 
+.header-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .navigator__wrapper {
   display: flex;
   width: 443px;
@@ -89,6 +100,18 @@
 .navigator__link_a {
   color: #545454;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navigator__link_a:hover {
+  color: #292929;
+}
+
+.active-link {
+  border-bottom: #F1CDB3 3px solid;
+  padding-bottom: 3px;
+  color: #545454;
 }
 
 /*Our friends*/
@@ -135,6 +158,17 @@
   margin-bottom: 30px;
   background-color: #FAFAFA;
   border-radius: 9px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.pet:hover {
+  background-color: #FFFFFF;
+}
+
+.pet:hover button {
+  border: none;
+  background-color: #FDDCC4;
 }
 
 .pet__img {
@@ -205,6 +239,7 @@
 .inactive {
   border: 2px solid #CDCDCD;
   color: #CDCDCD;
+  background-color: #F6F6F6;
 }
 
 .number-active {
@@ -216,6 +251,14 @@
 .active {
   border: 2px solid #F1CDB3;
   color: #292929;
+  background-color: #F6F6F6;
+  transition: 0.5s;
+}
+
+.active:hover {
+  cursor: pointer;
+  border: none;
+  background-color: #FDDCC4;
 }
 
 /*footer*/

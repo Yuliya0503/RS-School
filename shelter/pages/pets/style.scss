@@ -26,6 +26,7 @@
   
   
   $color-primary: #F1CDB3;
+  $color-primary-light: #FDDCC4;
   $color-light-xl: #FFFFFF;
   $color-light-l: #F6F6F6;
   $color-light-s: #FAFAFA;
@@ -35,6 +36,10 @@
   
   
   
+html {
+  scroll-behavior: smooth;
+}
+
   .body {
     box-sizing: border-box;
     display: block;
@@ -46,6 +51,8 @@
     display: flex;
     justify-content: center;  
     background-color: $color-light-xl;
+    position: sticky; 
+    top: 0;
     &-wrapper {
       box-sizing: border-box;
       display: flex;
@@ -84,8 +91,12 @@
       margin-left: 2px;
       letter-spacing: 0.1em;
       margin-top: 8px;
-     
     }
+  }
+
+  .header-link {
+    text-decoration: none;
+    cursor: pointer;
   }
   
   .navigator {
@@ -108,8 +119,20 @@
       &_a {
       color: $color-dark-l;
       text-decoration: none;
+      cursor: pointer;
+      transition: 0.5s;
+
+      &:hover {
+        color: $color-dark-3xl;
+      }
       }
     }
+  }
+
+  .active-link {
+    border-bottom: $color-primary 3px solid;
+    padding-bottom: 3px;
+    color: $color-dark-l;
   }
 
   /*Our friends*/
@@ -156,7 +179,15 @@
   margin-bottom: 30px;
   background-color: $color-light-s;
   border-radius: 9px;
-
+  transition: 0.5s;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-light-xl;
+    & button {
+      border: none;
+      background-color: $color-primary-light;
+    }
+  }
 
   &__img {
     border-radius: 9px 9px 0px 0px;
@@ -226,6 +257,7 @@
 .inactive {
   border: 2px solid $color-dark-s;
   color: $color-dark-s;
+  background-color: $color-light-l;
 }
 
 .number-active {
@@ -237,6 +269,13 @@
 .active {
   border: 2px solid $color-primary;
   color: $color-dark-3xl;
+  background-color: $color-light-l;
+  transition: 0.5s;
+  &:hover {
+    cursor: pointer;
+    border: none;
+    background-color: $color-primary-light;
+  }
 }
 
 /*footer*/
