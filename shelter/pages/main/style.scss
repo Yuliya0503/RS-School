@@ -40,6 +40,22 @@ $color-dark-xl: #4C4C4C;
 $color-dark-3xl: #292929;
 
 
+/*width content*/
+
+$tablet-width: 1279px;
+$mobile-width: 767px;
+
+/*mixins*/
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content;}
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) { @content; }
+}
+
+/*styles*/
 html {
   scroll-behavior: smooth;
 }
@@ -60,13 +76,24 @@ html {
   -moz-background-size: 100%;
   background-size: 100%;
   background-position: center 0;
+  
+  @include media-tablet {
+    padding-top: 30px;
+    background-image: url(../../assets/images/tablet/start-screen-tablet.png);
+  }
+
   &-wrapper {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     width: 1200px;
     height: 60px;
+
+    @include media-tablet {
+      max-width: 708px;
+    }
   }
+  
 }
 
 .logo {
@@ -85,6 +112,9 @@ html {
     align-items: center;
     margin: 0;
     height: 35px;
+    @include media-tablet {
+      padding-top: 1px;
+    }
   }
   &__text {
     color: $color-light-xl;
@@ -132,7 +162,6 @@ html {
 
     &:hover {
       color: $color-light-s;
-
     }
     }
   }
@@ -140,7 +169,7 @@ html {
 
 .active {
   border-bottom: $color-primary 3px solid;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   color: $color-light-s;
 }
 /*Not-only*/
@@ -152,6 +181,11 @@ html {
   -moz-background-size: 100%;
   background-size: 100%;
   background-position: center -120px;
+  
+  @include media-tablet {
+    height: 1075px;
+    background-image: url(../../assets/images/tablet/start-screen-tablet.png);
+  }
   &_wrapper {
     max-width: 1200px;
     display: flex;
@@ -159,6 +193,12 @@ html {
     align-items: center;
     margin:auto;
     padding-top: 50px;
+    
+    @include media-tablet {
+      max-width: 708px;
+      flex-direction: column;
+      padding-top: 0px;
+    }
   }
 }
 
@@ -168,6 +208,13 @@ html {
   padding-bottom: 243px;
   padding-top: 98px;
   padding-right: 40px;
+
+  @include media-tablet {
+    padding-top: 24px;
+    padding-right: 0;
+    padding-bottom: 130px;
+  }
+
   &__title {
     color: $color-light-xl;
     font-family: $font-heading;
@@ -190,6 +237,12 @@ html {
     text-align: left;
     margin-bottom: 43px;
     margin-top: 41px;
+  }
+
+  &__button {
+    @include media-tablet {
+      margin: auto;
+    }
   }
 }
 
@@ -222,6 +275,18 @@ html {
   .image-not-only-wrapper {
     padding-top: 10px;
     padding-left: 2px;
+    @include media-tablet {
+     padding-left: 139px;
+     padding-top: 6px;
+      margin: auto;
+    }
+  }
+
+  .image-not-only {
+    @include media-tablet {
+      width: 569px;
+      height: 593px;
+    }
   }
 
   /*about*/
@@ -229,6 +294,10 @@ html {
 .about {
   background-color: $color-light-xl;
   height: 588px;
+ 
+  @include media-tablet {
+    height: 1048px;
+  }
 
   &-wrapper {
     max-width: 1200px;
@@ -237,18 +306,30 @@ html {
     align-items: center;
     margin:auto;
     justify-content: center;
+
+    @include media-tablet {
+      max-width: 768px;
+      flex-direction: column-reverse;
+    }
   }
 
   &-image-wrapper {
     width: 300px;
     margin-top: 80px;
     margin-right: 120px;
+    @include media-tablet {
+      margin-top: 114px;
+      margin-right: 0px;
+    }
   }
 
   &-text {
     width: 430px;
     height: 380px;
     margin-top: 7px;
+    @include media-tablet {
+      margin-top: 46px;
+    }
 
     &__title {
       font-family: $font-heading;
@@ -291,6 +372,10 @@ html {
     margin:auto;
     padding-top: 80px;
     padding-left: 3px;
+
+    @include media-tablet {
+      max-width: 708px;
+    }
   }
   &-title {
     font-family: $font-heading;
@@ -324,6 +409,7 @@ html {
   &:hover {
     background-color: $color-primary-light;
     border: none;
+    
   }
 }
 
@@ -334,6 +420,11 @@ html {
 
 .pets-card-wrapper {
   display: flex;
+  @include media-tablet {
+    justify-content: space-between;
+    width: 580px;
+    
+  }
 }
 
 .pet {
@@ -345,6 +436,12 @@ html {
   border-radius: 9px;
   transition: 0.5s;
   cursor: pointer;
+
+  @include media-tablet {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 
   &:hover {
     background-color: $color-light-xl;
@@ -382,6 +479,12 @@ html {
   }
 }
 
+.pet-tablet{
+  @include media-tablet {
+    display: none;
+  }
+}
+
 .button-our-friends {
   margin-top: 60px;
 }
@@ -396,6 +499,10 @@ html {
   background-color: $color-light-xl;
   box-sizing: border-box;
   height: 611px;
+  
+  @include media-tablet {
+    height: 770px;
+  }
 
   &-wrapper {
     max-width: 1200px;
@@ -404,6 +511,10 @@ html {
     margin:auto;
     padding-top: 80px;
     padding-left: 3px;
+
+    @include media-tablet  {
+      max-width: 708px;
+    }
   }
 
   &-title {
@@ -425,13 +536,27 @@ html {
   display: flex;
   align-items: center;
   justify-content:center;
-  margin-bottom: 55px;
+  flex-wrap: wrap;
+
+  @include media-tablet {
+    max-width: 640px;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: auto;
+  }
 }
 
 .block-svg {
   height: 113px;
   margin-right: 60px;
   margin-left: 60px; 
+  margin-bottom: 55px;
+  @include media-tablet {
+    margin:auto;
+    margin-bottom: 55px;
+    width: 170px;
+  }
+
 
   &__img {
     width: 60px;

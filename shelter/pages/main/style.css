@@ -14,6 +14,9 @@
 }
 
 /*Variables*/
+/*width content*/
+/*mixins*/
+/*styles*/
 html {
   scroll-behavior: smooth;
 }
@@ -36,12 +39,25 @@ html {
   background-position: center 0;
 }
 
+@media (max-width: 1279px) {
+  .header {
+    padding-top: 30px;
+    background-image: url(../../assets/images/tablet/start-screen-tablet.png);
+  }
+}
+
 .header-wrapper {
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   width: 1200px;
   height: 60px;
+}
+
+@media (max-width: 1279px) {
+  .header-wrapper {
+    max-width: 708px;
+  }
 }
 
 .logo {
@@ -62,6 +78,12 @@ html {
   align-items: center;
   margin: 0;
   height: 35px;
+}
+
+@media (max-width: 1279px) {
+  .logo__header {
+    padding-top: 1px;
+  }
 }
 
 .logo__text {
@@ -113,7 +135,7 @@ html {
 
 .active {
   border-bottom: #F1CDB3 3px solid;
-  padding-bottom: 3px;
+  padding-bottom: 4px;
   color: #FAFAFA;
 }
 
@@ -127,6 +149,13 @@ html {
   background-position: center -120px;
 }
 
+@media (max-width: 1279px) {
+  .Not-only {
+    height: 1075px;
+    background-image: url(../../assets/images/tablet/start-screen-tablet.png);
+  }
+}
+
 .Not-only_wrapper {
   max-width: 1200px;
   display: flex;
@@ -136,12 +165,28 @@ html {
   padding-top: 50px;
 }
 
+@media (max-width: 1279px) {
+  .Not-only_wrapper {
+    max-width: 708px;
+    flex-direction: column;
+    padding-top: 0px;
+  }
+}
+
 .text-not-only {
   width: 460px;
   height: 322px;
   padding-bottom: 243px;
   padding-top: 98px;
   padding-right: 40px;
+}
+
+@media (max-width: 1279px) {
+  .text-not-only {
+    padding-top: 24px;
+    padding-right: 0;
+    padding-bottom: 130px;
+  }
 }
 
 .text-not-only__title {
@@ -166,6 +211,12 @@ html {
   text-align: left;
   margin-bottom: 43px;
   margin-top: 41px;
+}
+
+@media (max-width: 1279px) {
+  .text-not-only__button {
+    margin: auto;
+  }
 }
 
 .button {
@@ -200,10 +251,31 @@ html {
   padding-left: 2px;
 }
 
+@media (max-width: 1279px) {
+  .image-not-only-wrapper {
+    padding-left: 139px;
+    padding-top: 6px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1279px) {
+  .image-not-only {
+    width: 569px;
+    height: 593px;
+  }
+}
+
 /*about*/
 .about {
   background-color: #FFFFFF;
   height: 588px;
+}
+
+@media (max-width: 1279px) {
+  .about {
+    height: 1048px;
+  }
 }
 
 .about-wrapper {
@@ -215,16 +287,36 @@ html {
   justify-content: center;
 }
 
+@media (max-width: 1279px) {
+  .about-wrapper {
+    max-width: 768px;
+    flex-direction: column-reverse;
+  }
+}
+
 .about-image-wrapper {
   width: 300px;
   margin-top: 80px;
   margin-right: 120px;
 }
 
+@media (max-width: 1279px) {
+  .about-image-wrapper {
+    margin-top: 114px;
+    margin-right: 0px;
+  }
+}
+
 .about-text {
   width: 430px;
   height: 380px;
   margin-top: 7px;
+}
+
+@media (max-width: 1279px) {
+  .about-text {
+    margin-top: 46px;
+  }
 }
 
 .about-text__title {
@@ -266,6 +358,12 @@ html {
   margin: auto;
   padding-top: 80px;
   padding-left: 3px;
+}
+
+@media (max-width: 1279px) {
+  .our-friends-wrapper {
+    max-width: 708px;
+  }
 }
 
 .our-friends-title {
@@ -312,6 +410,13 @@ html {
   display: flex;
 }
 
+@media (max-width: 1279px) {
+  .pets-card-wrapper {
+    justify-content: space-between;
+    width: 580px;
+  }
+}
+
 .pet {
   width: 270px;
   height: 435px;
@@ -321,6 +426,14 @@ html {
   border-radius: 9px;
   transition: 0.5s;
   cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  .pet {
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 .pet:hover {
@@ -360,6 +473,12 @@ html {
   margin-right: 2px;
 }
 
+@media (max-width: 1279px) {
+  .pet-tablet {
+    display: none;
+  }
+}
+
 .button-our-friends {
   margin-top: 60px;
 }
@@ -375,6 +494,12 @@ html {
   height: 611px;
 }
 
+@media (max-width: 1279px) {
+  .help {
+    height: 770px;
+  }
+}
+
 .help-wrapper {
   max-width: 1200px;
   text-align: center;
@@ -382,6 +507,12 @@ html {
   margin: auto;
   padding-top: 80px;
   padding-left: 3px;
+}
+
+@media (max-width: 1279px) {
+  .help-wrapper {
+    max-width: 708px;
+  }
 }
 
 .help-title {
@@ -402,13 +533,31 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 55px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1279px) {
+  .line-svg {
+    max-width: 640px;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: auto;
+  }
 }
 
 .block-svg {
   height: 113px;
   margin-right: 60px;
   margin-left: 60px;
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1279px) {
+  .block-svg {
+    margin: auto;
+    margin-bottom: 55px;
+    width: 170px;
+  }
 }
 
 .block-svg__img {
