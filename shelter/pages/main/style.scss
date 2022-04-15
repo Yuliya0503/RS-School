@@ -450,6 +450,7 @@ html {
 
   &:hover {
     background-color: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     & button {
       border: none;
       background-color: $color-primary-light;

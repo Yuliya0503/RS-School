@@ -35,6 +35,22 @@
   $color-dark-3xl: #292929;
   
   
+/*width content*/
+
+$tablet-width: 1279px;
+$mobile-width: 767px;
+
+/*mixins*/
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) { @content;}
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) { @content; }
+}
+
+/*styles*/
   
 html {
   scroll-behavior: smooth;
@@ -49,7 +65,7 @@ html {
   .header {
     height: 111px;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     background-color: $color-light-xl;
     position: sticky; 
     top: 0;
@@ -59,14 +75,18 @@ html {
       justify-content: space-between;
       width: 1200px;
       padding-top: 24px;
+
+      @include media-tablet {
+        max-width: 708px;
+      }
     }
   }
   
   .logo {
-    width: 185px;
+    width: 186px;
     height: 60px;
     margin: 0;
-    padding: 0;;
+    padding: 0;
     &__header {
       color: $color-dark-l;
       font-family: $font-heading;
@@ -74,7 +94,7 @@ html {
       font-style: normal;
       font-size: $size-h1;
       line-height: 35px;
-      letter-spacing: 0.057em;
+      letter-spacing: 0.06em;
       align-items: center;
       margin: 0;
       height: 35px;
@@ -142,6 +162,10 @@ html {
   background-color: $color-light-l;
   height: 1343px;
 
+  @include media-tablet {
+    height: 1733px;
+  }
+
   &-wrapper {
     max-width: 1200px;
     text-align: center;
@@ -149,6 +173,10 @@ html {
     margin: auto;
     padding-top: 82px;
     padding-left: 3px;
+    
+    @include media-tablet {
+      width: 580px;
+    }
   }
   &-title {
     font-family: $font-heading;
@@ -170,7 +198,11 @@ html {
   justify-content: space-between;
   margin: auto;
   margin-top: 60px;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
+
+  @include media-tablet {
+    margin-top: 30px;
+  }
 }
 
 .pet {
@@ -183,6 +215,7 @@ html {
   cursor: pointer;
   &:hover {
     background-color: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
     & button {
       border: none;
       background-color: $color-primary-light;
@@ -217,6 +250,10 @@ html {
     height: 52px;
     margin-right: 2px;
   }
+
+  &-none-tablet {
+    display: none;
+  }
 }
 
 .button__a {
@@ -239,6 +276,11 @@ html {
   justify-content: space-between;
   margin-top: 28px;
   padding-right: 2px;
+
+  @include media-tablet {
+margin-top: 10px;
+}
+
   &__arrow {
     width: 52px;
     height: 52px;
@@ -289,6 +331,11 @@ html {
   height: 350px;
   box-sizing: border-box;
 
+  @include media-tablet {
+    background-image: url(../../assets/images/tablet/footer-tablet.png);
+    height: 640px;
+  }
+
   &-wrapper {
     width: 1200px;
     display: flex;
@@ -296,6 +343,19 @@ html {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
+
+    @include media-tablet {
+      max-width: 708px;
+      flex-wrap: wrap;
+      padding-top: 31px;
+      justify-content: space-around;
+    }
+  }
+
+  &-image-wrapper {
+    @include media-tablet {
+      margin-top: 64px;
+    }
   }
 }
 
@@ -304,6 +364,12 @@ html {
   text-align: start;
   margin-bottom: 45px;
   margin-right: 159px;
+
+  @include media-tablet {
+    margin: auto;
+    max-width: 302px;
+    margin-right: 29px;
+  }
 
   &__title{
     font-family: $font-heading;
@@ -320,6 +386,10 @@ html {
     display: flex;
     margin-bottom: 37px;
     padding-top: 3px;
+    @include media-tablet {
+      padding-top: 4px;
+      margin-bottom: 36px;
+    }
   }
 
   &__icon {
@@ -343,7 +413,18 @@ html {
   margin-bottom: 24px;
   padding-top: 0;
 
+  @include media-tablet {
+    margin-left: -4px;
+    margin-right: 1px;
+  }
+
   &-line {
     margin-bottom: 30px;
+
+    @include media-tablet {
+      margin-left: -5px;
+      margin-bottom: 27px;
+      padding-top: 4px;
+    }
   }
 }

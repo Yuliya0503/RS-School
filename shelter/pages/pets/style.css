@@ -14,6 +14,9 @@
 }
 
 /*Variables*/
+/*width content*/
+/*mixins*/
+/*styles*/
 html {
   scroll-behavior: smooth;
 }
@@ -41,8 +44,14 @@ html {
   padding-top: 24px;
 }
 
+@media (max-width: 1279px) {
+  .header-wrapper {
+    max-width: 708px;
+  }
+}
+
 .logo {
-  width: 185px;
+  width: 186px;
   height: 60px;
   margin: 0;
   padding: 0;
@@ -55,7 +64,7 @@ html {
   font-style: normal;
   font-size: 32px;
   line-height: 35px;
-  letter-spacing: 0.057em;
+  letter-spacing: 0.06em;
   align-items: center;
   margin: 0;
   height: 35px;
@@ -121,6 +130,12 @@ html {
   height: 1343px;
 }
 
+@media (max-width: 1279px) {
+  .our-friends {
+    height: 1733px;
+  }
+}
+
 .our-friends-wrapper {
   max-width: 1200px;
   text-align: center;
@@ -128,6 +143,12 @@ html {
   margin: auto;
   padding-top: 82px;
   padding-left: 3px;
+}
+
+@media (max-width: 1279px) {
+  .our-friends-wrapper {
+    width: 580px;
+  }
 }
 
 .our-friends-title {
@@ -152,6 +173,12 @@ html {
   flex-wrap: wrap;
 }
 
+@media (max-width: 1279px) {
+  .pets-card-wrapper {
+    margin-top: 30px;
+  }
+}
+
 .pet {
   width: 270px;
   height: 435px;
@@ -164,6 +191,7 @@ html {
 
 .pet:hover {
   background-color: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pet:hover button {
@@ -200,6 +228,10 @@ html {
   margin-right: 2px;
 }
 
+.pet-none-tablet {
+  display: none;
+}
+
 .button__a {
   text-decoration: none;
   font-size: 17px;
@@ -220,6 +252,12 @@ html {
   justify-content: space-between;
   margin-top: 28px;
   padding-right: 2px;
+}
+
+@media (max-width: 1279px) {
+  .buttons {
+    margin-top: 10px;
+  }
 }
 
 .buttons__arrow {
@@ -272,6 +310,13 @@ html {
   box-sizing: border-box;
 }
 
+@media (max-width: 1279px) {
+  .footer {
+    background-image: url(../../assets/images/tablet/footer-tablet.png);
+    height: 640px;
+  }
+}
+
 .footer-wrapper {
   width: 1200px;
   display: flex;
@@ -281,11 +326,34 @@ html {
   padding-top: 40px;
 }
 
+@media (max-width: 1279px) {
+  .footer-wrapper {
+    max-width: 708px;
+    flex-wrap: wrap;
+    padding-top: 31px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer-image-wrapper {
+    margin-top: 64px;
+  }
+}
+
 .address {
   height: 234px;
   text-align: start;
   margin-bottom: 45px;
   margin-right: 159px;
+}
+
+@media (max-width: 1279px) {
+  .address {
+    margin: auto;
+    max-width: 302px;
+    margin-right: 29px;
+  }
 }
 
 .address__title {
@@ -304,6 +372,13 @@ html {
   display: flex;
   margin-bottom: 37px;
   padding-top: 3px;
+}
+
+@media (max-width: 1279px) {
+  .address__text {
+    padding-top: 4px;
+    margin-bottom: 36px;
+  }
 }
 
 .address__icon {
@@ -327,6 +402,21 @@ html {
   padding-top: 0;
 }
 
+@media (max-width: 1279px) {
+  .map {
+    margin-left: -4px;
+    margin-right: 1px;
+  }
+}
+
 .map-line {
   margin-bottom: 30px;
+}
+
+@media (max-width: 1279px) {
+  .map-line {
+    margin-left: -5px;
+    margin-bottom: 27px;
+    padding-top: 4px;
+  }
 }
