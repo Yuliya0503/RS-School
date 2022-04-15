@@ -184,6 +184,8 @@ html {
   
   @include media-tablet {
     height: 1075px;
+    background-position: center -90px;
+    background-size: 100%;
     background-image: url(../../assets/images/tablet/start-screen-tablet.png);
   }
   &_wrapper {
@@ -409,7 +411,6 @@ html {
   &:hover {
     background-color: $color-primary-light;
     border: none;
-    
   }
 }
 
@@ -421,9 +422,13 @@ html {
 .pets-card-wrapper {
   display: flex;
   @include media-tablet {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     justify-content: space-between;
-    width: 580px;
-    
+    grid-auto-flow: column;
+    grid-column-gap: 20px;
+    margin-right: 3px;
   }
 }
 
@@ -501,7 +506,7 @@ html {
   height: 611px;
   
   @include media-tablet {
-    height: 770px;
+    height: 780px;
   }
 
   &-wrapper {
@@ -514,6 +519,7 @@ html {
 
     @include media-tablet  {
       max-width: 708px;
+      padding-top: 81px;
     }
   }
 
@@ -529,6 +535,9 @@ html {
     text-align: center;
     margin: auto;
     margin-bottom: 60px;
+    @include media-tablet {
+      margin-bottom: 59px;
+    }
   }
 }
 
@@ -540,9 +549,13 @@ html {
 
   @include media-tablet {
     max-width: 640px;
-    justify-content: space-between;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: space-around;
+    grid-column-gap: 50px;
     margin: auto;
+    padding-right: 4px;
   }
 }
 
@@ -573,6 +586,10 @@ html {
     align-items:flex-start;
     letter-spacing: 0.06em;
     color: $color-dark-l;
+
+    @include media-tablet {
+      padding-left: 2px;
+    }
   }
 }
 
@@ -583,21 +600,41 @@ html {
   box-sizing: border-box;
   height: 462px;
 
+  @include media-tablet {
+    height: 782px;
+  }
+
   &-wrapper {
     width: 920px;
     display: flex;
     margin: auto;
     padding-top: 80px;
     justify-content:space-around;
+    
+    @include media-tablet {
+      max-width: 700px;
+      flex-direction: column-reverse;
+    }
   }
 }
 
 .image-in-addition-wrapper{
   margin-top: 10px;
+
+  @include media-tablet {
+    margin-top: 48px;
+    margin-right: 1px;
+  }
 }
 
 .in-addition-text {
   margin-left: 25px;
+
+  @include media-tablet {
+    margin: auto;
+    text-align: center;
+  }
+
   &__title {
     font-family: $font-heading;
     font-weight: 400;
@@ -622,6 +659,10 @@ html {
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
+
+    @include media-tablet {
+      margin-top: 19px;
+    }
   
     &-italic{
       font-family: $font-pharagraph;
@@ -665,6 +706,10 @@ html {
   position: relative;
   bottom: 5px;
   left: 2px;
+
+  @include media-tablet {
+    bottom: 6px;
+  }
 }
 
 .button__image {
@@ -682,6 +727,11 @@ html {
   background-position: center 0;
   height: 350x;
   box-sizing: border-box;
+  
+  @include media-tablet {
+    background-image: url(../../assets/images/tablet/footer-tablet.png);
+    height: 639px;
+  }
 
   &-wrapper {
     width: 1200px;
@@ -690,6 +740,19 @@ html {
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
+
+    @include media-tablet {
+      max-width: 708px;
+      flex-wrap: wrap;
+      padding-top: 31px;
+      justify-content: space-around;
+    }
+  }
+
+  &-image-wrapper {
+    @include media-tablet {
+      margin-top: 64px;
+    }
   }
 }
 
@@ -698,6 +761,12 @@ html {
   text-align: start;
   margin-bottom: 45px;
   margin-right: 159px;
+
+  @include media-tablet {
+    margin: auto;
+    max-width: 302px;
+    margin-right: 29px;
+  }
 
   &__title{
     font-family: $font-heading;
@@ -710,10 +779,15 @@ html {
     letter-spacing: 0.06em;
     margin-top: 0;
   }
+
   &__text {
     display: flex;
     margin-bottom: 37px;
     padding-top: 3px;
+    @include media-tablet {
+      padding-top: 4px;
+      margin-bottom: 36px;
+    }
   }
 
   &__icon {
@@ -737,7 +811,18 @@ html {
   margin-bottom: 24px;
   padding-top: 0;
 
+  @include media-tablet {
+    margin-left: -4px;
+    margin-right: 1px;
+  }
+
   &-line {
     margin-bottom: 30px;
+    @include media-tablet {
+      margin-left: -5px;
+      margin-bottom: 27px;
+      padding-top: 4px;
+    }
   }
 }
+
