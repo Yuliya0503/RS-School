@@ -45,6 +45,7 @@ $color-dark-3xl: #292929;
 
 $tablet-width: 1279px;
 $mobile-width: 767px;
+$mobile-menu: 320px;
 
 /*mixins*/
 
@@ -54,6 +55,9 @@ $mobile-width: 767px;
 
 @mixin media-mobile {
   @media (max-width: $mobile-width) { @content; }
+}
+@mixin menu-mobile {
+  @media (max-width: $mobile-menu) { @content; }
 }
 
 /*styles*/
@@ -177,6 +181,108 @@ html {
       color: $color-light-s;
     }
     }
+  }
+}
+
+.menu-adaptive {
+  display: none;
+  @include media-mobile {
+    display: block;
+    justify-content: end;
+    flex-direction: column;
+    margin-right: 43px;
+    margin-top: 9px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    z-index: 1;
+    color: $color-primary;
+  }
+}
+.line {
+  display:block;
+  width: 30px;
+  height: 2px;
+  background-color: $color-primary;
+  margin: 9px 0;
+  position: relative;
+  z-index: 1;
+  transform-origin: 4px 0;
+  transition: transform 0.5s;
+}
+.change {
+  transform: rotate(90deg);
+  margin-top: 18px;
+  margin-left: 77px;
+  @include menu-mobile {
+    margin-right: 35px;
+    margin-left: 0px;
+  }
+}
+
+.menu-burger {
+  display: none;
+  @include media-mobile {
+    display: none;
+    position:absolute;
+    bottom: -416px;
+    left: 90px;
+    width: 485px;
+    height: 823px;
+    padding: 15px;
+    background-color: $color-dark-3xl;
+    transition: transform 0.5s;
+    overflow-x: hidden;
+  }
+  @include menu-mobile {
+    width: 550px;
+  }
+}
+.open {
+  transform:  rotate(-90deg);
+  transition: transform 0.9s;
+  display: block;
+}
+
+.logo-menu {
+  width: 185px;
+  height: 60px;
+  padding-top: 50px;
+  margin-left: -6px;
+  @include menu-mobile { 
+  width: 185px;
+  height: 60px;
+  padding-top: 16px;
+  margin-left: 26px;
+  }
+}
+.text-menu {
+  margin-top: 8px;
+}
+.burger-menu_nav {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  width: 243px;
+  padding-top: 158px;
+  padding-left: 22px;
+  overflow: hidden;
+  @include menu-mobile {
+    padding-top: 160px;
+    padding-left: 55px;
+  }
+}
+
+.menu__link {
+  font-family:$font-pharagraph;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $size-h1;
+  line-height: 51px;
+  color: $color-dark-s;
+  margin-bottom: 41px;
+  @include menu-mobile {
+    margin-bottom: 41px;
   }
 }
 
@@ -394,8 +500,11 @@ html {
   }
 
   .image-about {
-    width: 260px;
-    height: 353.6px;
+    @include media-mobile {
+      width: 260px;
+      height: 353.6px;
+    }
+    
   }
 
   &-text {
