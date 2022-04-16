@@ -22,7 +22,8 @@
   $size-h4: 20px;
   $size-logo-sub: 13px;
   $size-button-text: 17px;
-  $size-pharagraph-l: 15px;  
+  $size-pharagraph-l: 15px;
+  $size-mobile-h3: 25px;
   
   
   $color-primary: #F1CDB3;
@@ -79,6 +80,9 @@ html {
       @include media-tablet {
         max-width: 708px;
       }
+      @include media-mobile {
+        max-width: 300px;
+      }
     }
   }
   
@@ -126,7 +130,9 @@ html {
       height: 27px;
       justify-content: space-between;
       margin-top: 15px;
-  
+      @include media-mobile {
+        display: none;
+      }
     }
     &__link {
       font-family: $font-pharagraph;
@@ -165,6 +171,9 @@ html {
   @include media-tablet {
     height: 1733px;
   }
+  @include media-mobile {
+    height: 1650px;
+  }
 
   &-wrapper {
     max-width: 1200px;
@@ -173,9 +182,12 @@ html {
     margin: auto;
     padding-top: 82px;
     padding-left: 3px;
-    
     @include media-tablet {
-      width: 580px;
+      max-width: 580px;
+    }
+    @include media-mobile {
+      max-width: 300px;
+      padding-top: 43px;
     }
   }
   &-title {
@@ -189,6 +201,12 @@ html {
     width: 400px;
     text-align: center;
     margin: auto;
+    @include media-mobile {
+      font-size: $size-mobile-h3;
+      line-height: 32px;
+      max-width: 300px;
+      text-align: center;
+    }
   }
 }
 
@@ -199,9 +217,13 @@ html {
   margin: auto;
   margin-top: 60px;
   flex-wrap: wrap;
-
   @include media-tablet {
     margin-top: 30px;
+  }
+  @include media-mobile {
+    justify-content: center;
+    margin-top: 43px;
+  
   }
 }
 
@@ -252,7 +274,14 @@ html {
   }
 
   &-none-tablet {
+    @include media-tablet{ 
     display: none;
+    }
+  }
+  &-mobi {
+    @include media-mobile {
+      display: none;
+    }
   }
 }
 
@@ -276,10 +305,12 @@ html {
   justify-content: space-between;
   margin-top: 28px;
   padding-right: 2px;
-
   @include media-tablet {
-margin-top: 10px;
-}
+  margin-top: 10px;
+  }
+  @include media-mobile {
+    max-width: 300px;
+  }
 
   &__arrow {
     width: 52px;
@@ -330,10 +361,13 @@ margin-top: 10px;
   background-position: center 0;
   height: 350px;
   box-sizing: border-box;
-
   @include media-tablet {
     background-image: url(../../assets/images/tablet/footer-tablet.png);
     height: 640px;
+  }
+  @include media-mobile {
+    background-image: url(../../assets/images/mobile/footer-mobile.png);
+    height: 809px;
   }
 
   &-wrapper {
@@ -343,18 +377,29 @@ margin-top: 10px;
     justify-content: space-between;
     align-items: center;
     padding-top: 40px;
-
     @include media-tablet {
       max-width: 708px;
       flex-wrap: wrap;
       padding-top: 31px;
       justify-content: space-around;
     }
+    @include media-mobile {
+      max-width: 300px;
+    }
   }
 
   &-image-wrapper {
     @include media-tablet {
       margin-top: 64px;
+    }
+    @include media-mobile {
+      margin-top: 15px;
+    }
+  }
+  &-image {
+    @include media-mobile {
+      width: 260px;
+      height: 269px;
     }
   }
 }
@@ -364,13 +409,15 @@ margin-top: 10px;
   text-align: start;
   margin-bottom: 45px;
   margin-right: 159px;
-
   @include media-tablet {
     margin: auto;
     max-width: 302px;
     margin-right: 29px;
   }
-
+  @include media-mobile {
+    margin: auto;
+    margin-bottom: 13px;
+  }
   &__title{
     font-family: $font-heading;
     font-weight: 400;
@@ -381,6 +428,11 @@ margin-top: 10px;
     color: $color-light-xl;
     letter-spacing: 0.06em;
     margin-top: 0;
+    @include media-mobile {
+      font-size: $size-mobile-h3;
+      line-height: 32px;
+      text-align: center;
+    }
   }
   &__text {
     display: flex;
@@ -390,10 +442,24 @@ margin-top: 10px;
       padding-top: 4px;
       margin-bottom: 36px;
     }
+    @include media-mobile {
+      padding-top: 15px;
+      margin-bottom: 25px;
+    }
   }
 
   &__icon {
     margin-right: 20px;
+    @include media-mobile {
+      margin-right: 20px;
+      margin-left: 14px;
+    }
+  }
+
+  .tel {
+    @include media-mobile {
+      margin-left: 20px;
+    }
   }
 
   &__link {
@@ -417,14 +483,27 @@ margin-top: 10px;
     margin-left: -4px;
     margin-right: 1px;
   }
+  @include media-mobile {
+    margin-left: 10px;
+  }
 
   &-line {
     margin-bottom: 30px;
-
     @include media-tablet {
       margin-left: -5px;
       margin-bottom: 27px;
       padding-top: 4px;
+    }
+  }
+  &-icon {
+    @include media-mobile{ 
+    margin-left: 5px;
+    margin-top: 10px;
+    }
+  }
+  &-link {
+    @include media-mobile {
+      margin-top: 7px;
     }
   }
 }
