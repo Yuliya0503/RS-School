@@ -390,6 +390,7 @@ html {
     @include media-mobile {
       width: 300px;
       text-align: center;
+      margin-top: 42px;
     }
   }
 
@@ -539,7 +540,7 @@ html {
         text-align: center;
         margin: auto;
         padding-left: 1px;
-        margin-bottom: 25px;
+        margin-bottom: 24px;
         height: 65px;
       }
     }
@@ -557,7 +558,7 @@ html {
         text-align: justify;
         width: 270px;
         margin-left: 15px;
-        margin-bottom: 21px;
+        margin-bottom: 22px;
       }
     }
   }
@@ -588,6 +589,7 @@ html {
     @include media-mobile {
       max-width: 300px;
       padding-top: 42px;
+      padding-left: 1px;
     }
   }
   &-title {
@@ -624,8 +626,8 @@ html {
 .button_arrow {
   width: 52px;
   height: 52px;
-  border: 2px solid;
-  border-color: $color-primary;
+  border: 2px $color-primary solid;
+  background-color: $color-light-l;
   border-radius: 100px;
   transition: 0.5s;
   cursor: pointer;
@@ -710,15 +712,20 @@ html {
     align-items: center;
     letter-spacing: 0.06em;
     margin-bottom: 29px;
-    @include media-mobile {
+    @include media-tablet {
       padding-left: 1px;
-      margin-bottom: 29px;
+      margin-top: 25px;
+      margin-bottom: 31px;
+    }
+    @include media-mobile {
+      padding-left: 3px;
+      margin-bottom: 31px;
+      margin-top: 25px;
     }
   }
 
   &__button_border {
-    border: 2px solid;
-    border-color: $color-primary;
+    border: 2px $color-primary solid;
     background-color: $color-light-s;
     box-sizing: border-box;
     border-radius: 100px;
@@ -726,8 +733,12 @@ html {
     width: 187px;
     height: 52px;
     margin-right: 2px;
+    @include media-tablet {
+      margin-left: 2px;
+    }
     @include media-mobile{
       margin-right: 0px;
+      margin-left: 2px;
     }
   }
 }
@@ -745,6 +756,10 @@ html {
 
 .button-our-friends {
   margin-top: 60px;
+  @include media-tablet {
+    margin-top: 61px;
+    padding-right: 1px;
+  }
   @include media-mobile {
     margin-top: 10px;
   }
@@ -806,7 +821,7 @@ html {
       font-size: $size-mobile-h3;
       line-height: 32px;
       width: 270px;
-      margin-bottom: 41px;
+      margin-bottom: 42px;
     }
   }
 }
@@ -985,7 +1000,7 @@ html {
       text-align: center;
       align-items: center;
       letter-spacing: 0em;
-      margin-bottom: 20px;
+      margin-bottom: 19px;
     }
   
     &-italic{
@@ -1000,7 +1015,7 @@ html {
       @include media-mobile {
         width: 280px;
         padding-left: 5px;
-        padding-top: 8px;
+        padding-top: 9px;
         text-align: justify;
       }
     }
@@ -1045,7 +1060,7 @@ html {
   bottom: 5px;
   left: 2px;
   @include media-tablet {
-    bottom: 6px;
+    bottom: 5px;
   }
   @include media-mobile {
     left: 6px;
@@ -1055,6 +1070,9 @@ html {
 .button__image {
   margin-right: 13px;
   margin-top: 10px;
+  @include media-tablet {
+    margin-top: 9px;
+  }
   @include media-mobile {
     margin-right: 9px;
   }
@@ -1095,6 +1113,7 @@ html {
     }
     @include media-mobile {
       max-width: 300px;
+      padding-top: 30px;
     }
   }
 

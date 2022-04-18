@@ -403,6 +403,7 @@ html {
   .text-not-only__text {
     width: 300px;
     text-align: center;
+    margin-top: 42px;
   }
 }
 
@@ -581,7 +582,7 @@ html {
     text-align: center;
     margin: auto;
     padding-left: 1px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
     height: 65px;
   }
 }
@@ -602,7 +603,7 @@ html {
     text-align: justify;
     width: 270px;
     margin-left: 15px;
-    margin-bottom: 21px;
+    margin-bottom: 22px;
   }
 }
 
@@ -638,6 +639,7 @@ html {
   .our-friends-wrapper {
     max-width: 300px;
     padding-top: 42px;
+    padding-left: 1px;
   }
 }
 
@@ -679,8 +681,8 @@ html {
 .button_arrow {
   width: 52px;
   height: 52px;
-  border: 2px solid;
-  border-color: #F1CDB3;
+  border: 2px #F1CDB3 solid;
+  background-color: #F6F6F6;
   border-radius: 100px;
   transition: 0.5s;
   cursor: pointer;
@@ -779,16 +781,24 @@ html {
   margin-bottom: 29px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1279px) {
   .pet__title {
     padding-left: 1px;
-    margin-bottom: 29px;
+    margin-top: 25px;
+    margin-bottom: 31px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pet__title {
+    padding-left: 3px;
+    margin-bottom: 31px;
+    margin-top: 25px;
   }
 }
 
 .pet__button_border {
-  border: 2px solid;
-  border-color: #F1CDB3;
+  border: 2px #F1CDB3 solid;
   background-color: #FAFAFA;
   box-sizing: border-box;
   border-radius: 100px;
@@ -798,9 +808,16 @@ html {
   margin-right: 2px;
 }
 
+@media (max-width: 1279px) {
+  .pet__button_border {
+    margin-left: 2px;
+  }
+}
+
 @media (max-width: 767px) {
   .pet__button_border {
     margin-right: 0px;
+    margin-left: 2px;
   }
 }
 
@@ -818,6 +835,13 @@ html {
 
 .button-our-friends {
   margin-top: 60px;
+}
+
+@media (max-width: 1279px) {
+  .button-our-friends {
+    margin-top: 61px;
+    padding-right: 1px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -898,7 +922,7 @@ html {
     font-size: 25px;
     line-height: 32px;
     width: 270px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
@@ -1124,7 +1148,7 @@ html {
     text-align: center;
     align-items: center;
     letter-spacing: 0em;
-    margin-bottom: 20px;
+    margin-bottom: 19px;
   }
 }
 
@@ -1143,7 +1167,7 @@ html {
   .in-addition-text__text-italic {
     width: 280px;
     padding-left: 5px;
-    padding-top: 8px;
+    padding-top: 9px;
     text-align: justify;
   }
 }
@@ -1196,7 +1220,7 @@ html {
 
 @media (max-width: 1279px) {
   .span-text {
-    bottom: 6px;
+    bottom: 5px;
   }
 }
 
@@ -1209,6 +1233,12 @@ html {
 .button__image {
   margin-right: 13px;
   margin-top: 10px;
+}
+
+@media (max-width: 1279px) {
+  .button__image {
+    margin-top: 9px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1263,6 +1293,7 @@ html {
 @media (max-width: 767px) {
   .footer-wrapper {
     max-width: 300px;
+    padding-top: 30px;
   }
 }
 
