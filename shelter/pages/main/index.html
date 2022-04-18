@@ -25,6 +25,27 @@
         <li class="navigator__link link"><a href="#contacts" class="navigator__link_a">Contacts</a></li>
       </ul>
     </nav>
+    <div class="menu-adaptive">
+      <a href="#" class="burger-menu">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      </a>
+      <div class="menu-burger">
+        <div class="logo-menu">
+          <a href="#" class="header-link">
+          <div class="logo__header">Cozy House</div>
+          <p class="logo__text text-menu">Shelter for pets in Boston</p>
+          </a>
+        </div>
+      <nav class="burger-menu_nav">
+        <li class="menu__link burger"><a href="#" class="navigator__link_a active">About the shelter</a></li>
+        <li class="menu__link burger"><a href="../pets/index.html" class="navigator__link_a">Our pets</a></li>
+        <li class="menu__link burger"><a href="#help" class="navigator__link_a">Help the shelter</a></li>
+        <li class="menu__link burger"><a href="#contacts" class="navigator__link_a">Contacts</a></li>
+      </nav>
+      </div>
+    </div>
   </div>
   </header>
   <main class="main-wrapper">
@@ -59,7 +80,7 @@
       <h3 class="title our-friends-title">Our friends who<br/> are looking for a house</h3>
       <div class="pets-wrapper">
         <div class="button_arrow-wrapper">
-          <button class="button_arrow">
+          <button class="button_arrow button_arrow-left">
             <img class="arrow" src="../../assets/icons/ArrowLeft.svg" alt="arrow-left">
           </button>
         </div>
@@ -71,14 +92,14 @@
             <h4 class="pet__title">Katrine</h4>
             <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
           </div>
-          <div class="pet">
+          <div class="pet pet-mobile">
             <div class="pet__img">
               <img class="img" src="../../assets/images/pets-jennifer.jpg" alt="pets-jennifer">
             </div>
             <h4 class="pet__title">Jennifer</h4>
             <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
           </div>
-          <div class="pet">
+          <div class="pet pet-tablet">
             <div class="pet__img">
               <img class="img" src="../../assets/images/pets-woody.jpg" alt="pets-woody">
             </div>
@@ -87,7 +108,7 @@
           </div>
         </div>
        <div class="button_arrow-wrapper">
-          <button class="button_arrow">
+          <button class="button_arrow button_arrow-right">
             <img class="arrow" src="../../assets/icons/ArrowRight.svg" alt="arrow-right">
           </button>
         </div>
@@ -121,8 +142,6 @@
             <img class="block-svg__img" src="../../assets/icons/icon-shampoos.svg" alt="Shampoos">
             <h4 class="block-svg__text">Shampoos</h4>
           </div>
-        </div>
-        <div class="line-svg">
           <div class="block-svg">
             <img class="block-svg__img" src="../../assets/icons/icon-vitamins.svg" alt="Vitamins">
             <h4 class="block-svg__text">Vitamins</h4>
@@ -165,19 +184,19 @@
           <a class="address__link" href="mailto:email@shelter.com">email@shelter.com</a>
         </div>
         <div class="address__text">
-          <img class="address__icon" src="../../assets/icons/icon-phone.svg" alt="icon-phone">
+          <img class="address__icon tel" src="../../assets/icons/icon-phone.svg" alt="icon-phone">
           <a class="address__link" href="tel:+136745677554">+13 674 567 75 54</a>
         </div>
       </div>
-      <div class="address">
+      <div class="address address-map">
         <h3 class="address__title map">We are waiting for your visit</h3>
          <div class="address__text map-line">
-          <img class="address__icon" src="../../assets/icons/icon-marker.svg" alt="icon-marker">
-          <a class="address__link" href="https://goo.gl/maps/ZwsLU2y7SgkMRVBy5" target="_blank">1 Central Street, Boston (entrance from the store)</a>
+          <img class="address__icon map-icon" src="../../assets/icons/icon-marker.svg" alt="icon-marker">
+          <a class="address__link map-link" href="https://goo.gl/maps/ZwsLU2y7SgkMRVBy5" target="_blank">1 Central Street, Boston (entrance from the store)</a>
         </div>
         <div class="address__text map-line">
-          <img class="address__icon" src="../../assets/icons//icon-marker.svg" alt="icon-marker">
-          <a class="address__link" href="https://goo.gl/maps/dNvx8mmx7JkZipuw7" target="_blank">18 South Park, London </a>
+          <img class="address__icon map-icon" src="../../assets/icons//icon-marker.svg" alt="icon-marker">
+          <a class="address__link map-link" href="https://goo.gl/maps/dNvx8mmx7JkZipuw7" target="_blank">18 South Park, London </a>
         </div>
       </div>
       <div class="footer-image-wrapper">
@@ -185,5 +204,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

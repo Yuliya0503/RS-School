@@ -14,6 +14,9 @@
 }
 
 /*Variables*/
+/*width content*/
+/*mixins*/
+/*styles*/
 html {
   scroll-behavior: smooth;
 }
@@ -41,8 +44,20 @@ html {
   padding-top: 24px;
 }
 
+@media (max-width: 1279px) {
+  .header-wrapper {
+    max-width: 708px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-wrapper {
+    max-width: 300px;
+  }
+}
+
 .logo {
-  width: 185px;
+  width: 186px;
   height: 60px;
   margin: 0;
   padding: 0;
@@ -55,7 +70,7 @@ html {
   font-style: normal;
   font-size: 32px;
   line-height: 35px;
-  letter-spacing: 0.057em;
+  letter-spacing: 0.06em;
   align-items: center;
   margin: 0;
   height: 35px;
@@ -88,6 +103,12 @@ html {
   margin-top: 15px;
 }
 
+@media (max-width: 767px) {
+  .navigator__wrapper {
+    display: none;
+  }
+}
+
 .navigator__link {
   font-family: "Arial";
   font-weight: 400;
@@ -108,6 +129,37 @@ html {
   color: #292929;
 }
 
+.menu-adaptive {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu-adaptive {
+    display: block;
+    justify-content: end;
+    flex-direction: column;
+    margin-right: 43px;
+    margin-top: 7px;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    z-index: 1;
+    color: #F1CDB3;
+  }
+}
+
+.line {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #000000;
+  margin: 9px 0;
+  position: relative;
+  z-index: 1;
+  transform-origin: 4px 0;
+  transition: transform 0.5s;
+}
+
 .active-link {
   border-bottom: #F1CDB3 3px solid;
   padding-bottom: 3px;
@@ -118,7 +170,19 @@ html {
 .our-friends {
   box-sizing: border-box;
   background-color: #F6F6F6;
-  height: 1343px;
+  height: 1342px;
+}
+
+@media (max-width: 1279px) {
+  .our-friends {
+    height: 1733px;
+  }
+}
+
+@media (max-width: 767px) {
+  .our-friends {
+    height: 1650px;
+  }
 }
 
 .our-friends-wrapper {
@@ -128,6 +192,19 @@ html {
   margin: auto;
   padding-top: 82px;
   padding-left: 3px;
+}
+
+@media (max-width: 1279px) {
+  .our-friends-wrapper {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 767px) {
+  .our-friends-wrapper {
+    max-width: 300px;
+    padding-top: 43px;
+  }
 }
 
 .our-friends-title {
@@ -143,13 +220,35 @@ html {
   margin: auto;
 }
 
+@media (max-width: 767px) {
+  .our-friends-title {
+    font-size: 25px;
+    line-height: 32px;
+    max-width: 300px;
+    text-align: center;
+  }
+}
+
 .pets-card-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
-  margin-top: 60px;
+  margin-top: 59px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 1279px) {
+  .pets-card-wrapper {
+    margin-top: 29px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pets-card-wrapper {
+    justify-content: center;
+    margin-top: 43px;
+  }
 }
 
 .pet {
@@ -164,6 +263,7 @@ html {
 
 .pet:hover {
   background-color: #FFFFFF;
+  box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
 }
 
 .pet:hover button {
@@ -184,8 +284,16 @@ html {
   color: #545454;
   align-items: center;
   letter-spacing: 0.06em;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   margin-top: 25px;
+  padding-right: 1px;
+}
+
+@media (max-width: 767px) {
+  .pet__title {
+    margin-bottom: 31px;
+    padding-right: 0px;
+  }
 }
 
 .pet__button_border {
@@ -198,6 +306,18 @@ html {
   width: 187px;
   height: 52px;
   margin-right: 2px;
+}
+
+@media (max-width: 1279px) {
+  .pet-none-tablet {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .pet-mobi {
+    display: none;
+  }
 }
 
 .button__a {
@@ -220,6 +340,18 @@ html {
   justify-content: space-between;
   margin-top: 28px;
   padding-right: 2px;
+}
+
+@media (max-width: 1279px) {
+  .buttons {
+    margin-top: 9px;
+  }
+}
+
+@media (max-width: 767px) {
+  .buttons {
+    max-width: 300px;
+  }
 }
 
 .buttons__arrow {
@@ -266,10 +398,24 @@ html {
   background-image: url(../../assets/images/footer-gradient-background.png);
   background-repeat: no-repeat;
   -moz-background-size: 100%;
-  background-size: 100%;
-  background-position: center 0;
+  background-size: cover;
+  background-position: center center;
   height: 350px;
   box-sizing: border-box;
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    background-image: url(../../assets/images/tablet/footer-tablet-ourpets.png);
+    min-height: 639px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    background-image: url(../../assets/images/mobile/footer-mobile-ourpets.png);
+    height: 809px;
+  }
 }
 
 .footer-wrapper {
@@ -281,11 +427,61 @@ html {
   padding-top: 40px;
 }
 
+@media (max-width: 1279px) {
+  .footer-wrapper {
+    max-width: 708px;
+    flex-wrap: wrap;
+    padding-top: 31px;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    max-width: 300px;
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer-image-wrapper {
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-image-wrapper {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-image {
+    width: 260px;
+    height: 269px;
+  }
+}
+
 .address {
   height: 234px;
   text-align: start;
   margin-bottom: 45px;
   margin-right: 159px;
+}
+
+@media (max-width: 1279px) {
+  .address {
+    margin: auto;
+    max-width: 302px;
+    margin-right: 29px;
+  }
+}
+
+@media (max-width: 767px) {
+  .address {
+    margin: auto;
+    margin-bottom: 13px;
+  }
 }
 
 .address__title {
@@ -300,14 +496,49 @@ html {
   margin-top: 0;
 }
 
+@media (max-width: 767px) {
+  .address__title {
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
 .address__text {
   display: flex;
   margin-bottom: 37px;
   padding-top: 3px;
 }
 
+@media (max-width: 1279px) {
+  .address__text {
+    padding-top: 4px;
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .address__text {
+    padding-top: 15px;
+    margin-bottom: 25px;
+  }
+}
+
 .address__icon {
   margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .address__icon {
+    margin-right: 20px;
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .address .tel {
+    margin-left: 20px;
+  }
 }
 
 .address__link {
@@ -323,10 +554,44 @@ html {
 }
 
 .map {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
   padding-top: 0;
+}
+
+@media (max-width: 1279px) {
+  .map {
+    margin-left: -4px;
+    margin-right: 1px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map {
+    margin-left: 10px;
+  }
 }
 
 .map-line {
   margin-bottom: 30px;
+}
+
+@media (max-width: 1279px) {
+  .map-line {
+    margin-left: -5px;
+    margin-bottom: 27px;
+    padding-top: 4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-icon {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map-link {
+    margin-top: 7px;
+  }
 }
