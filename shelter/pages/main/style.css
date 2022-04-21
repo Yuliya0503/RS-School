@@ -1274,14 +1274,14 @@ html {
 
 @media (max-width: 1279px) {
   .footer {
-    height: 639px;
+    height: 645px;
     background-position: center;
   }
 }
 
 @media (max-width: 767px) {
   .footer {
-    height: 809px;
+    height: 814px;
   }
 }
 
@@ -1322,7 +1322,7 @@ html {
 
 @media (max-width: 767px) {
   .footer-image-wrapper {
-    margin-top: 11px;
+    margin-top: 14px;
   }
 }
 

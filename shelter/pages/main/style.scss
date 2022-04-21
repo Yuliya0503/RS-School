@@ -1109,11 +1109,11 @@ html {
   box-sizing: border-box;
   
   @include media-tablet {
-    height: 639px;
+    height: 645px;
     background-position: center;
   }
   @include media-mobile {
-    height: 809px;
+    height: 814px;
   }
 
   &-wrapper {
@@ -1141,7 +1141,7 @@ html {
       margin-top: 60px;
     }
     @include media-mobile {
-      margin-top: 11px;
+      margin-top: 14px;
     }
   }
   &-image {
