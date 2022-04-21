@@ -61,6 +61,9 @@ html {
   box-sizing: border-box;
   display: block;
   text-align: center;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 .header {
@@ -383,20 +386,15 @@ html {
 /*footer*/
 
 .footer {
-  background-image: url(../../assets/images/footer-gradient-background.png);
-  background-repeat: no-repeat;
-  -moz-background-size: 100%;
-  background-size: cover;  
+  background: url(../../assets/images/noise_transparent@2x.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
   background-position: center center;
-  height: 350px;
+  height: 360px;
   box-sizing: border-box;
   @include media-tablet {
-    background-image: url(../../assets/images/tablet/footer-tablet-ourpets.png);
-    min-height: 639px;
+    min-height: 646px;
   }
   @include media-mobile {
-    background-image: url(../../assets/images/mobile/footer-mobile-ourpets.png);
-    height: 809px;
+    height: 815px;
   }
 
   &-wrapper {
