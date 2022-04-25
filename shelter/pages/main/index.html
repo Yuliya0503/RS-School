@@ -26,24 +26,26 @@
       </ul>
     </nav>
     <div class="menu-adaptive"><!--change-->
-      <div class="burger-menu"><!--open-burger-->
-      <span class="line line_1"></span>
-      <span class="line line_2"></span>
-      <span class="line line_3"></span>
-      </div>
-      <div class="menu-burger"><!-- open--> 
-        <div class="logo-menu">
-          <a href="#" class="header-link">
-          <div class="logo__header">Cozy House</div>
-          <p class="logo__text text-menu">Shelter for pets in Boston</p>
-          </a>
+      <div class="div"><!--shadow-->
+        <div class="burger-menu"><!--open-burger-->
+        <span class="line line_1"></span>
+        <span class="line line_2"></span>
+        <span class="line line_3"></span>
         </div>
-        <nav class="burger-menu_nav">
-          <li class="menu__link burger"><a href="#" class="navigator__link_a active">About the shelter</a></li>
-          <li class="menu__link burger"><a href="../pets/index.html" class="navigator__link_a">Our pets</a></li>
-          <li class="menu__link burger"><a href="#help" class="navigator__link_a">Help the shelter</a></li>
-          <li class="menu__link burger"><a href="#contacts" class="navigator__link_a">Contacts</a></li>
-        </nav>
+        <div class="menu-burger"><!-- open--> 
+          <div class="logo-menu">
+            <a href="#" class="header-link">
+            <div class="logo__header">Cozy House</div>
+            <p class="logo__text text-menu">Shelter for pets in Boston</p>
+            </a>
+          </div>
+          <nav class="burger-menu_nav">
+            <li class="menu__link burger"><a href="#" class="navigator__link_a active">About the shelter</a></li>
+            <li class="menu__link burger"><a href="../pets/index.html" class="navigator__link_a">Our pets</a></li>
+            <li class="menu__link burger"><a href="#help" class="navigator__link_a">Help the shelter</a></li>
+            <li class="menu__link burger"><a href="#contacts" class="navigator__link_a">Contacts</a></li>
+          </nav>
+        </div>
       </div>
     </div>
   </div>
@@ -78,37 +80,87 @@
     <section class="our-friends" id="our-friends">
     <div class="our-friends-wrapper">
       <h3 class="title our-friends-title">Our friends who<br/> are looking for a house</h3>
-      <div class="pets-wrapper">
-        <div class="button_arrow-wrapper">
-          <button class="button_arrow button_arrow-left">
+      <div class="pets-wrapper"><!--wrapper-->
+        <div class="button_arrow-wrapper"> <!--кнопки "btn"-->
+          <button class="button_arrow button_arrow-left" id="button-left">
             <img class="arrow" src="../../assets/icons/ArrowLeft.svg" alt="arrow-left">
           </button>
+        </div><!--/кнопки-->
+        <div class="pets-card-wrapper"><!--блок карточек  carousel-wrapper-->
+          <div class="pets-carousel" id="pets-carousel"><!--карусель  carousel-->
+            <div class="block" id="block-left"><!--лево item-->
+              <div class="pet" id="Katrine"><!--карточка card1-->
+                <div class="pet__img ">
+                  <img class="img" src="../../assets/images/pets-katrine.jpg" alt="pets-katrine">
+                </div>
+                <h4 class="pet__title">Katrine</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Jennifer"><!--карточка2-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-jennifer.jpg" alt="pets-jennifer">
+                </div>
+                <h4 class="pet__title">Jennifer</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Woody"><!--карточка3-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-woody.jpg" alt="pets-woody">
+                </div>
+                <h4 class="pet__title">Woody</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+            </div>
+            <div class="block" id="block-active"><!--карточка-->
+              <div class="pet" id="Sophia"><!--карточка4-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-sophia.jpg" alt="pets-sophia">
+                </div>
+                <h4 class="pet__title">Sophia</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Timmy"><!--карточка5-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-timmy.jpg" alt="pets-timmy">
+                </div>
+                <h4 class="pet__title">Timmy</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Charly"><!--карточка6-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-charly.jpg" alt="pets-charly">
+                </div>
+                <h4 class="pet__title">Charly</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+            </div>
+            <div class="block" id="block-right">
+              <div class="pet" id="Scarlett"><!--карточка7-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-scarlett.jpg" alt="pets-scarlett">
+                </div>
+                <h4 class="pet__title">Scarlett</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Freddie"><!--карточка8-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-freddie.jpg" alt="pets-freddie">
+                </div>
+                <h4 class="pet__title">Freddie</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+              <div class="pet" id="Woody"><!--карточка9-->
+                <div class="pet__img">
+                  <img class="img" src="../../assets/images/pets-woody.jpg" alt="pets-woody">
+                </div>
+                <h4 class="pet__title">Woody</h4>
+                <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="pets-card-wrapper">
-          <div class="pet">
-            <div class="pet__img">
-              <img class="img" src="../../assets/images/pets-katrine.jpg" alt="pets-katrine">
-            </div>
-            <h4 class="pet__title">Katrine</h4>
-            <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
-          </div>
-          <div class="pet pet-mobile">
-            <div class="pet__img">
-              <img class="img" src="../../assets/images/pets-jennifer.jpg" alt="pets-jennifer">
-            </div>
-            <h4 class="pet__title">Jennifer</h4>
-            <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
-          </div>
-          <div class="pet pet-tablet">
-            <div class="pet__img">
-              <img class="img" src="../../assets/images/pets-woody.jpg" alt="pets-woody">
-            </div>
-            <h4 class="pet__title">Woody</h4>
-            <button class="button pet__button_border"><a href="#" class="button__a">Learn more</a></button>
-          </div>
-        </div>
-       <div class="button_arrow-wrapper">
-          <button class="button_arrow button_arrow-right">
+       <div class="button_arrow-wrapper"><!--кнопка-->
+          <button class="button_arrow button_arrow-right" id="button-right">
             <img class="arrow" src="../../assets/icons/ArrowRight.svg" alt="arrow-right">
           </button>
         </div>
