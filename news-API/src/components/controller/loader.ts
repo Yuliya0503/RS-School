@@ -2,14 +2,14 @@ type Option = [string];
 
 interface LoaderClass {
   baseLink: string;
-  options?: Option;
+  options?: Option | {apiKey?: string;};
 };
 
 class Loader implements LoaderClass {
     baseLink: string;
-    options?: Option;
+    options?: Option | {apiKey?: string;};
 
-    constructor(baseLink: string, options?: Option ) {
+    constructor(baseLink: string, options?: Option | {apiKey?: string;} ) {
         this.baseLink = baseLink;
         this.options = options;
     }
@@ -33,12 +33,12 @@ class Loader implements LoaderClass {
         return res;
     }
 
-    makeUrl(endpoint: string, options?: string[]) {
-        const urlOptions = { ...this.options, ...options };
+    makeUrl(endpoint: string, options?: Option) {
+      const urlOptions: { [index: string]:  number | {}}  = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key) => {
-            url += `${key}=${urlOptions[key as keyof Option]}&`;
+            url += `${key}=${urlOptions[key]}&`;
         });
 
         return url.slice(0, -1);
