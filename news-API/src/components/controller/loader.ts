@@ -14,13 +14,13 @@ class Loader implements LoaderClass {
         this.options = options;
     }
 
-    getResp(
-        { endpoint, options}: {endpoint: string, options: Option},
+    public getResp(
+        { endpoint, options}: {endpoint: string, options?: Option | {}},
         callback = (): void => {
             console.error('No callback for GET response');
         }
     ): void {
-        this.load('GET', endpoint, callback, options);
+        this.load('GET', endpoint, callback, options as Option);
     };
 
     errorHandler(res: Response): Response {
@@ -33,7 +33,7 @@ class Loader implements LoaderClass {
         return res;
     }
 
-    makeUrl(endpoint: string, options?: Option) {
+    private makeUrl(endpoint: string, options?: Option) {
       const urlOptions: { [index: string]:  number | {}}  = { ...this.options, ...options };
         let url = `${this.baseLink}${endpoint}?`;
 
