@@ -14,9 +14,10 @@ class Loader implements LoaderClass {
         this.options = options;
     }
 
-    public getResp(
+
+    public getResp<T> (
         { endpoint, options}: {endpoint: string, options?: Option | {}},
-        callback = (): void => {
+        callback = (data: T): void => {
             console.error('No callback for GET response');
         }
     ): void {
