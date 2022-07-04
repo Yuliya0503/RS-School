@@ -6,6 +6,7 @@ body {
 
 header {
     padding: 10px 30px;
+    height: 10vh;
 }
 
 header h1 {
@@ -13,12 +14,56 @@ header h1 {
     font-weight: 800;
 }
 
-footer {
-    height: 100px;
+@media (max-width: 640px) {
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+}
+
+
+
+.footer-wrapper {
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5vh;
+  margin-left: 2rem;
+  margin-right: 1rem;
+}
+
+.footer-data {
+  font-family: 'Fugaz One', cursive;
+  font-size: 1em;
+  font-weight: normal;
+  color: #120a17;
+}
+.footer-text {
+  text-decoration: none;
+  color: #fff;
+}
+p {
+  margin-top: 15px;
+}
+
+.link:hover {
+  font-size: 1.02em;
+  transition: 0.5s;
+}
+
+.footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
 }
+
 footer .copyright {
     font-size: 14px;
     color: #333;
