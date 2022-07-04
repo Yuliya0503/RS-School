@@ -24,7 +24,7 @@ class Loader implements LoaderClass {
         this.load('GET', endpoint, callback, options as Option);
     };
 
-    errorHandler(res: Response): Response {
+     public errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -45,7 +45,7 @@ class Loader implements LoaderClass {
         return url.slice(0, -1);
     }
 
-    load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Option) {
+    private load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Option) {
         fetch(this.makeUrl(endpoint, options), { method })
             .then(this.errorHandler)
             .then((res) => res.json())

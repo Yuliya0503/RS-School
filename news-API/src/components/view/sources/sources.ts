@@ -5,7 +5,7 @@ interface Data {
   name: string;
 }
 class Sources {
-    draw(data: Data[]):void {
+    public draw(data: Data[]):void {
         const fragment: DocumentFragment = document.createDocumentFragment();
         const sourceItemTemp = document.querySelector('#sourceItemTemp') as HTMLTemplateElement;
 

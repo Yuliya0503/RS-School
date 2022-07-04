@@ -12,7 +12,7 @@ interface Data {
 }
 
 class News {
-    draw(data: Data[]):void {
+    public draw(data: Data[]):void {
         const news: Data[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
         const fragment:DocumentFragment = document.createDocumentFragment();
