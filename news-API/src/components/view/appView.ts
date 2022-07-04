@@ -1,7 +1,7 @@
 import News from './news/news';
 import Sources from './sources/sources';
 
-interface Data {
+export interface Data {
   _item: string;
   idx: number;
   urlToImage: string;
@@ -13,11 +13,11 @@ interface Data {
   source: { name: string};
 }
 
-interface Source {
+ export interface Source {
   id: string;
   name: string;
 }
-interface DataNews {
+ export interface DataNews {
   status: string;
   totalResults: number;
   articles: Array<Data>;
