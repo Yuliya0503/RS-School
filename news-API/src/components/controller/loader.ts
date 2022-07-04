@@ -4,7 +4,12 @@ interface LoaderClass {
   baseLink: string;
   options?: Option | {apiKey?: string;};
 };
+enum Method {
+  POST,
+  GET,
+}
 
+type MethodString = keyof typeof Method;
 class Loader implements LoaderClass {
     baseLink: string;
     options?: Option | {apiKey?: string;};
@@ -45,7 +50,7 @@ class Loader implements LoaderClass {
         return url.slice(0, -1);
     }
 
-    private load<T>(method: string, endpoint: string, callback: (data: T) => void, options: Option) {
+    private load<T>(method: MethodString, endpoint: string, callback: (data: T) => void, options: Option) {
         fetch(this.makeUrl(endpoint, options), { method })
             .then(this.errorHandler)
             .then((res) => res.json())
