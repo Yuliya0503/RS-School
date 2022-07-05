@@ -1,17 +1,6 @@
 import News from './news/news';
 import Sources from './sources/sources';
-
-export interface Data {
-  _item: string;
-  idx: number;
-  urlToImage: string;
-  author: string;
-  publishedAt: string;
-  title: string;
-  description: string;
-  url: string;
-  source: { name: string};
-}
+import { Data } from './news/news'
 
  export interface Source {
   id: string;
@@ -24,20 +13,20 @@ export interface Data {
   sources: Array<Source>;
 }
 export class AppView {
-  news: News;
-  sources: Sources;
+  private news: News;
+  private sources: Sources;
     constructor() {
         this.news = new News();
         this.sources = new Sources();
     }
 
     public drawNews(data: DataNews): void {
-        const values = data?.articles ? data?.articles : [];
+        const values: Data[] = data?.articles ? data?.articles : [];
         this.news.draw(values);
     }
 
     public drawSources(data: DataNews): void {
-        const values = data?.sources ? data?.sources : [];
+        const values: Source[] = data?.sources ? data?.sources : [];
         this.sources.draw(values);
     }
 }
