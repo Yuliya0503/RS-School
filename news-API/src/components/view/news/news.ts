@@ -1,5 +1,5 @@
 import './news.css';
-interface Data {
+export interface Data {
   _item: string;
   idx: number;
   urlToImage: string;
@@ -18,7 +18,7 @@ class News {
         const fragment:DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp')!;
 
-        news.forEach((item, idx) => {
+        news.forEach((item, idx): void => {
             const newsClone = newsItemTemp.content.cloneNode(true) as HTMLElement;
 
             if (idx % 2) newsClone.querySelector('.news__item').classList.add('alt');
