@@ -11,8 +11,8 @@ enum Method {
 
 type MethodString = keyof typeof Method;
 class Loader implements LoaderClass {
-    baseLink: string;
-    options?: Option | {apiKey?: string;};
+  public baseLink: string;
+  public options?: Option | {apiKey?: string;};
 
     constructor(baseLink: string, options?: Option | {apiKey?: string;} ) {
         this.baseLink = baseLink;
@@ -39,23 +39,23 @@ class Loader implements LoaderClass {
         return res;
     }
 
-    private makeUrl(endpoint: string, options?: Option) {
+    private makeUrl(endpoint: string, options?: Option): string {
       const urlOptions: { [index: string]:  number | {}}  = { ...this.options, ...options };
-        let url = `${this.baseLink}${endpoint}?`;
+        let url: string = `${this.baseLink}${endpoint}?`;
 
-        Object.keys(urlOptions).forEach((key) => {
+        Object.keys(urlOptions).forEach((key): void => {
             url += `${key}=${urlOptions[key]}&`;
         });
 
         return url.slice(0, -1);
     }
 
-    private load<T>(method: MethodString, endpoint: string, callback: (data: T) => void, options: Option) {
+    private load<T>(method: MethodString, endpoint: string, callback: (data: T) => void, options: Option): void {
         fetch(this.makeUrl(endpoint, options), { method })
             .then(this.errorHandler)
-            .then((res) => res.json())
-            .then((data) => callback(data))
-            .catch((err) => console.error(err));
+            .then((res): Promise<T> => res.json())
+            .then((data: T) => callback(data))
+            .catch((err: Error) => console.error(err));
     }
 }
 
