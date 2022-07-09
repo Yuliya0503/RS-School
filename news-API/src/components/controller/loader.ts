@@ -1,35 +1,34 @@
 type Option = [string];
 
 interface LoaderClass {
-  baseLink: string;
-  options?: Option | {apiKey?: string;};
-};
+    baseLink: string;
+    options?: Option | { apiKey?: string };
+}
 enum Method {
-  POST,
-  GET,
+    POST,
+    GET,
 }
 
 type MethodString = keyof typeof Method;
 class Loader implements LoaderClass {
-  public baseLink: string;
-  public options?: Option | {apiKey?: string;};
+    public baseLink: string;
+    public options?: Option | { apiKey?: string };
 
-    constructor(baseLink: string, options?: Option | {apiKey?: string;} ) {
+    constructor(baseLink: string, options?: Option | { apiKey?: string }) {
         this.baseLink = baseLink;
         this.options = options;
     }
 
-
-    public getResp<T> (
-        { endpoint, options}: {endpoint: string, options?: Option | {}},
-        callback = (data: T): void => {
+    public getResp<T>(
+        { endpoint, options }: { endpoint: string; options?: Option | Record<string, unknown> },
+        callback = (_data: T): void => {
             console.error('No callback for GET response');
         }
     ): void {
         this.load('GET', endpoint, callback, options as Option);
-    };
+    }
 
-     public errorHandler(res: Response): Response {
+    public errorHandler(res: Response): Response {
         if (!res.ok) {
             if (res.status === 401 || res.status === 404)
                 console.log(`Sorry, but there is ${res.status} error: ${res.statusText}`);
@@ -40,8 +39,8 @@ class Loader implements LoaderClass {
     }
 
     private makeUrl(endpoint: string, options?: Option): string {
-      const urlOptions: { [index: string]:  number | {}}  = { ...this.options, ...options };
-        let url: string = `${this.baseLink}${endpoint}?`;
+        const urlOptions: { [index: string]: number | unknown } = { ...this.options, ...options };
+        let url = `${this.baseLink}${endpoint}?`;
 
         Object.keys(urlOptions).forEach((key): void => {
             url += `${key}=${urlOptions[key]}&`;

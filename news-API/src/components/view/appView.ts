@@ -1,20 +1,20 @@
 import News from './news/news';
 import Sources from './sources/sources';
-import { Data } from './news/news'
+import { Data } from './news/news';
 
- export interface Source {
-  id: string;
-  name: string;
+export interface Source {
+    id: string;
+    name: string;
 }
- export interface DataNews {
-  status: string;
-  totalResults: number;
-  articles: Array<Data>;
-  sources: Array<Source>;
+export interface DataNews {
+    status: string;
+    totalResults: number;
+    articles: Array<Data>;
+    sources: Array<Source>;
 }
 export class AppView {
-  private news: News;
-  private sources: Sources;
+    private news: News;
+    private sources: Sources;
     constructor() {
         this.news = new News();
         this.sources = new Sources();

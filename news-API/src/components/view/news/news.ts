@@ -1,22 +1,22 @@
 import './news.css';
 export interface Data {
-  _item: string;
-  idx: number;
-  urlToImage: string;
-  author: string;
-  publishedAt: string;
-  title: string;
-  description: string;
-  url: string;
-  source: { name: string};
+    _item: string;
+    idx: number;
+    urlToImage: string;
+    author: string;
+    publishedAt: string;
+    title: string;
+    description: string;
+    url: string;
+    source: { name: string };
 }
 
 class News {
-    public draw(data: Data[]):void {
+    public draw(data: Data[]): void {
         const news: Data[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
 
-        const fragment:DocumentFragment = document.createDocumentFragment();
-        const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp')!;
+        const fragment: DocumentFragment = document.createDocumentFragment();
+        const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp');
 
         news.forEach((item, idx): void => {
             const newsClone = newsItemTemp.content.cloneNode(true) as HTMLElement;
@@ -26,7 +26,8 @@ class News {
             (newsClone.querySelector('.news__meta-photo') as HTMLElement).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
             })`;
-            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent = item.author || item.source.name;
+            (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent =
+                item.author || item.source.name;
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
                 .slice(0, 10)
                 .split('-')
