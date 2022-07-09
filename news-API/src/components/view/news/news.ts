@@ -28,7 +28,7 @@ class News {
 
             (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent =
                 item.author || item.source.name;
-                
+
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
                 .slice(0, 10)
                 .split('-')

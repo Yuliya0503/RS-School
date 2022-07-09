@@ -46,7 +46,7 @@ class Loader implements LoaderClass {
         Object.keys(urlOptions).forEach((key): void => {
             url += `${key}=${urlOptions[key]}&`;
         });
-        
+
         return url.slice(0, -1);
     }
 
