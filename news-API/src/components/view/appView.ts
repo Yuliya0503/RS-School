@@ -6,12 +6,14 @@ export interface Source {
     id: string;
     name: string;
 }
+
 export interface DataNews {
     status: string;
     totalResults: number;
     articles: Array<Data>;
     sources: Array<Source>;
 }
+
 export class AppView {
     private news: News;
     private sources: Sources;

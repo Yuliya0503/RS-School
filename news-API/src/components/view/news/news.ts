@@ -14,7 +14,6 @@ export interface Data {
 class News {
     public draw(data: Data[]): void {
         const news: Data[] = data.length >= 10 ? data.filter((_item, idx) => idx < 10) : data;
-
         const fragment: DocumentFragment = document.createDocumentFragment();
         const newsItemTemp: HTMLTemplateElement = document.querySelector('#newsItemTemp');
 
@@ -26,8 +25,10 @@ class News {
             (newsClone.querySelector('.news__meta-photo') as HTMLElement).style.backgroundImage = `url(${
                 item.urlToImage || 'img/news_placeholder.jpg'
             })`;
+
             (newsClone.querySelector('.news__meta-author') as HTMLElement).textContent =
                 item.author || item.source.name;
+                
             (newsClone.querySelector('.news__meta-date') as HTMLElement).textContent = item.publishedAt
                 .slice(0, 10)
                 .split('-')
