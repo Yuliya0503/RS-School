@@ -1,17 +1,17 @@
 body {
-    color: #fff;
-    background: #17181c;
-    font-family: sans-serif;
+  color: #fff;
+  background: #17181c;
+  font-family: sans-serif;
 }
 
 header {
-    padding: 10px 30px;
-    height: 10vh;
+  padding: 10px 30px;
+  height: 10vh;
 }
 
 header h1 {
-    font-size: 40px;
-    font-weight: 800;
+  font-size: 40px;
+  font-weight: 800;
 }
 
 @media (max-width: 640px) {
@@ -24,9 +24,8 @@ header h1 {
     flex-direction: column;
     margin-top: 10px;
   }
+
 }
-
-
 
 .footer-wrapper {
   width: 90vw;
@@ -44,10 +43,12 @@ header h1 {
   font-weight: normal;
   color: #120a17;
 }
+
 .footer-text {
   text-decoration: none;
   color: #fff;
 }
+
 p {
   margin-top: 15px;
 }
@@ -58,23 +59,26 @@ p {
 }
 
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
 }
 
 footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
 }
+
 footer .copyright a {
-    color: #444;
+  color: #444;
 }
+
 footer .copyright a:hover {
-    color: #555;
+  color: #555;
 }
+
 footer .copyright:before {
-    content: '©';
+  content: '©';
 }
