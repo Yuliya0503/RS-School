@@ -50,7 +50,7 @@ const baseConfig = {
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new CopyPlugin({
         patterns: [
-          { from: './src/assets', to: './' },
+          { from: './src/assets', to: './assets' },
         ],
       }),
   ],
