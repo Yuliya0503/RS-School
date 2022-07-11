@@ -1,4 +1,4 @@
-const CATALOG = [
+export const CATALOG = [
   {
     id: 'el01',
     name: 'Юваль Харари. Sapiens. Краткая история человечества',
