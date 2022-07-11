@@ -1,2 +1,7 @@
 import './global.css';
-console.log('Hello');
+import Products from './scripts/components/products'
+
+const rootElement = document.getElementById('root');
+const productsPage = new Products();
+productsPage.render();
+
