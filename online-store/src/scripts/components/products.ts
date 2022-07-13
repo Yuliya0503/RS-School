@@ -31,6 +31,7 @@ export default class Products implements CatalogInterface {
                 <li>Издательство: ${publishingHouse}</li>
                 <li>Популярность: ${favorite} </li>
               </ul>
+              <button class="button" data-id="${id}">Добавить в корзину</button>
             </div>`;
         });
 
