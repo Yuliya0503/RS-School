@@ -2,7 +2,7 @@ export const CATALOG = [
     {
         id: 'el01',
         name: 'Юваль Харари. Sapiens. Краткая история человечества',
-        img: '../assets/books/sapiens.png',
+        img: './assets/books/sapiens.png',
         quantity: '15',
         year: '2020',
         cover: 'твердый',
@@ -14,7 +14,7 @@ export const CATALOG = [
     {
         id: 'el02',
         name: 'Эрих Фромм. Искусство любить',
-        img: '../assets/books/theArtOfLove.png',
+        img: './assets/books/theArtOfLove.png',
         quantity: '4',
         year: '2022',
         cover: 'мягкий',
@@ -26,7 +26,7 @@ export const CATALOG = [
     {
         id: 'el03',
         name: 'Стивен Хокинг. Теория Всего',
-        img: '../assets/books/theTheoryOfEverything.png',
+        img: './assets/books/theTheoryOfEverything.png',
         quantity: '8',
         year: '2022',
         cover: 'твердый',
@@ -38,7 +38,7 @@ export const CATALOG = [
     {
         id: 'el04',
         name: 'Бессел ван дер Колк. Тело помнит все',
-        img: '../assets/books/theBodyRemembersEverything.png',
+        img: './assets/books/theBodyRemembersEverything.png',
         quantity: '5',
         year: '2020',
         cover: 'мягкий',
@@ -50,7 +50,7 @@ export const CATALOG = [
     {
         id: 'el05',
         name: 'Грег Мортенсон. Три чашки чая',
-        img: '../assets/books/threeCupsOfTea.png',
+        img: './assets/books/threeCupsOfTea.png',
         quantity: '12',
         year: '2021',
         cover: 'твердый',
@@ -62,7 +62,7 @@ export const CATALOG = [
     {
         id: 'el06',
         name: 'Виктор Гюго. Труженики моря',
-        img: '../assets/books/seaWorkers.png',
+        img: './assets/books/seaWorkers.png',
         quantity: '15',
         year: '2018',
         cover: 'твердый',
@@ -74,7 +74,7 @@ export const CATALOG = [
     {
         id: 'el07',
         name: 'Джейн Остен. Гордость и предубеждение',
-        img: '../assets/books/PrideAndPrejudice.png',
+        img: './assets/books/PrideAndPrejudice.png',
         quantity: '10',
         year: '2021',
         cover: 'твердый',
@@ -86,7 +86,7 @@ export const CATALOG = [
     {
         id: 'el08',
         name: 'Каттон Элеанор. Светила',
-        img: '../assets/books/luminaries.png',
+        img: './assets/books/luminaries.png',
         quantity: '6',
         year: '2020',
         cover: 'твердый',
@@ -98,7 +98,7 @@ export const CATALOG = [
     {
         id: 'el09',
         name: 'Федор Достоевский. Преступление и наказание',
-        img: '../assets/books/CrimeAndPunishment.png',
+        img: './assets/books/CrimeAndPunishment.png',
         quantity: '4',
         year: '2022',
         cover: 'мягкий',
@@ -110,7 +110,7 @@ export const CATALOG = [
     {
         id: 'el10',
         name: 'Михаил Шолохов. Тихий Дон',
-        img: '../assets/books/quietDon.png',
+        img: './assets/books/quietDon.png',
         quantity: '8',
         year: '2019',
         cover: 'твердый',
@@ -122,7 +122,7 @@ export const CATALOG = [
     {
         id: 'el11',
         name: 'Робин Хобб. Ученик убийцы',
-        img: '../assets/books/assassinsApprentice.png',
+        img: './assets/books/assassinsApprentice.png',
         quantity: '4',
         year: '2022',
         cover: 'твердый',
@@ -134,7 +134,7 @@ export const CATALOG = [
     {
         id: 'el12',
         name: 'Анджей Сапковский. Ведьмак',
-        img: '../assets/books/witcher.png',
+        img: './assets/books/witcher.png',
         quantity: '13',
         year: '2019',
         cover: 'твердый',
@@ -146,7 +146,7 @@ export const CATALOG = [
     {
         id: 'el13',
         name: 'Нил Гейман. Американские боги',
-        img: '../assets/books/americanGods.png',
+        img: './assets/books/americanGods.png',
         quantity: '11',
         year: '2022',
         cover: 'твердый',
@@ -158,7 +158,7 @@ export const CATALOG = [
     {
         id: 'el14',
         name: 'Толкин Дж.Р.Р. Властелин колец. Хранители кольца',
-        img: '../assets/books/LordOfTheRings.png',
+        img: './assets/books/LordOfTheRings.png',
         quantity: '2',
         year: '2020',
         cover: 'мягкий',
@@ -170,7 +170,7 @@ export const CATALOG = [
     {
         id: 'el15',
         name: 'Мартин Джордж Р.Р. Игра престолов',
-        img: '../assets/books/gameOfThrones.png',
+        img: './assets/books/gameOfThrones.png',
         quantity: '4',
         year: '2021',
         cover: 'твердый',
@@ -182,7 +182,7 @@ export const CATALOG = [
     {
         id: 'el16',
         name: 'Кинг Стивен. 11/22/63',
-        img: '../assets/books/11-22-63.png',
+        img: './assets/books/11-22-63.png',
         quantity: '14',
         year: '2020',
         cover: 'мягкий',
@@ -194,7 +194,7 @@ export const CATALOG = [
     {
         id: 'el17',
         name: 'Говард Лавкрафт. Ктулху',
-        img: '../assets/books/cthulhu.png',
+        img: './assets/books/cthulhu.png',
         quantity: '4',
         year: '2021',
         cover: 'твердый',
@@ -206,7 +206,7 @@ export const CATALOG = [
     {
         id: 'el18',
         name: 'Мария Корелли. Скорбь Сатаны',
-        img: '../assets/books/satansSorrow.png',
+        img: './assets/books/satansSorrow.png',
         quantity: '8',
         year: '2022',
         cover: 'мягкий',
@@ -218,7 +218,7 @@ export const CATALOG = [
     {
         id: 'el19',
         name: 'Джо Хилл. Черный телефон',
-        img: '../assets/books/blackPhone.png',
+        img: './assets/books/blackPhone.png',
         quantity: '6',
         year: '2022',
         cover: 'твердый',
@@ -230,7 +230,7 @@ export const CATALOG = [
     {
         id: 'el20',
         name: 'Джеральд Бром. Косиног: История о колдовстве',
-        img: '../assets/books/cosinogh.png',
+        img: './assets/books/cosinogh.png',
         quantity: '6',
         year: '2022',
         cover: 'твердый',
@@ -242,7 +242,7 @@ export const CATALOG = [
     {
         id: 'el21',
         name: 'Донато Карризи. Девушка в тумане',
-        img: '../assets/books/girlInTheFog.png',
+        img: './assets/books/girlInTheFog.png',
         quantity: '1',
         year: '2018',
         cover: 'твердый',
@@ -254,7 +254,7 @@ export const CATALOG = [
     {
         id: 'el22',
         name: 'Ричард Осман. Клуб убийств по четвергам',
-        img: '../assets/books/ThursdayMurderClub.png',
+        img: './assets/books/ThursdayMurderClub.png',
         quantity: '12',
         year: '2022',
         cover: 'твердый',
@@ -266,7 +266,7 @@ export const CATALOG = [
     {
         id: 'el23',
         name: 'Тертон С. Семь смертей Эвелины Хардкасл',
-        img: '../assets/books/TheSevenDeathsofEvelynHardcastle.png',
+        img: './assets/books/TheSevenDeathsofEvelynHardcastle.png',
         quantity: '3',
         year: '2020',
         cover: 'мягкий',
@@ -278,7 +278,7 @@ export const CATALOG = [
     {
         id: 'el24',
         name: 'Агата Кристи. Смерть на Ниле',
-        img: '../assets/books/DeathontheNile.png',
+        img: './assets/books/DeathontheNile.png',
         quantity: '6',
         year: '2022',
         cover: 'Мягкий',
@@ -290,7 +290,7 @@ export const CATALOG = [
     {
         id: 'el25',
         name: 'Гэлбрейт Роберт. Смертельная белизна',
-        img: '../assets/books/deadlyWhite.png',
+        img: './assets/books/deadlyWhite.png',
         quantity: '9',
         year: '2020',
         cover: 'Мягкий',
