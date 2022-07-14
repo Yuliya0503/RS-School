@@ -1,10 +1,10 @@
 import './global.scss';
-import Products from './scripts/components/products';
+
 import LocalStorage from './scripts/localStorage/localStorage';
-
-
-const productsPage = new Products();
-productsPage.render();
+import Products from './scripts/components/products';
 
 const localStorage = new LocalStorage();
 localStorage.getProd();
+
+const productsPage = new Products();
+productsPage.render();
