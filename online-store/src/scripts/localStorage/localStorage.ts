@@ -3,7 +3,7 @@ import { CatalogInterface } from '../helpers/interfaces';
 export default class LocalStorage {
     public keyName: string;
 
-    comstructor() {
+    constructor() {
         this.keyName = 'products';
     }
 
