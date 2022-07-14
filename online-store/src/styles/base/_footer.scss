@@ -1,0 +1,49 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  background-color: #000000;
+  margin-top: 100px;
+  padding: 10px 20px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+
+    &_time {
+      background-color: #000000;
+
+    }
+
+    &_rss {
+      cursor: pointer;
+      transition: 0.6;
+
+      &:hover {
+        filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+        contrast(87%);
+      }
+
+    }
+
+    &_github {
+      cursor: pointer;
+      transition: 0.6;
+
+      &:hover {
+        filter: saturate(338%) contrast(67%);
+      }
+    }
+
+  }
+
+  &_text {
+    color: #d1caca;
+    font-size: 24px;
+  }
+}
+
+

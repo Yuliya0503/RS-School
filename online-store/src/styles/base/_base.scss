@@ -1,6 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background: url('./assets/background.png') no-repeat;
   background-attachment: fixed;
   background-size: cover;
   flex-grow: 1;
 }
+

@@ -13,11 +13,10 @@ export default class Products implements CatalogInterface {
     favorite: boolean;
 
     render(): void {
-        let htmlCatalog: string = '';
-        const rootElement:HTMLElement = document.getElementById('root');
+        let htmlCatalog = '';
+        const rootElement: HTMLElement = document.getElementById('root');
         CATALOG.forEach(({ id, name, img, quantity, year, cover, genre, publishingHouse, favorite }) => {
-
-          htmlCatalog += `
+            htmlCatalog += `
             <div class="products-element">
               <h4 class="products-element__name">${name}</h4>
               <div class="products-element__img">
@@ -35,10 +34,10 @@ export default class Products implements CatalogInterface {
             </div>`;
         });
 
-        const html: string = `
-    <div class="products-container">
-      ${htmlCatalog}
-    </div>`;
+        const html = `
+          <div class="products-container">
+            ${htmlCatalog}
+          </div>`;
 
         rootElement.innerHTML = html;
     }
