@@ -45,6 +45,12 @@
     height: 30px;
     border-radius: 15px;
     border:#ffffff solid 1px;
+    cursor: pointer;
+
+    &_active {
+      background-color: #a4f47a;
+      border: none;
+    }
   }
 
   &__description {
