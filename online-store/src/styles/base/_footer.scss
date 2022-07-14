@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   height: 50px;
-  background-color: #000000;
+  background-color: rgba($color: #000000, $alpha: 0.5);
   margin-top: 100px;
   padding: 10px 20px;
 
@@ -12,11 +12,6 @@
     align-items: center;
     width: 100%;
     margin: 0 auto;
-
-    &_time {
-      background-color: #000000;
-
-    }
 
     &_rss {
       cursor: pointer;
