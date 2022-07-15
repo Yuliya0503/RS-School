@@ -1,8 +1,10 @@
 import { CATALOG } from '../catalog/catalog';
-import { CatalogInterface } from '../helpers/interfaces';
+import { CatalogInterface, ICard } from '../helpers/interfaces';
 import LocalStorage from '../localStorage/localStorage';
+import { Card } from './card';
 
-const localStorageUtil = new LocalStorage();
+
+
 export default class Products implements CatalogInterface {
     id: string;
     name: string;
@@ -16,15 +18,19 @@ export default class Products implements CatalogInterface {
     classNameActive: string;
     labelAdd: string;
     labelRemove: string;
+    localStorageUtil = new LocalStorage();
+    card: ICard;
 
     constructor() {
         this.classNameActive = 'products-element__button_active';
         this.labelAdd = 'Добавить в корзину';
         this.labelRemove = 'Удалить из корзины';
+
     }
 
+
     handlerSetLocalStorage(element: HTMLElement, id: CatalogInterface['id']) {
-        const { pushProduct, products } = localStorageUtil.putProducts(id);
+        const { pushProduct, products } = this.localStorageUtil.putProducts(id);
 
         if (pushProduct) {
             element.classList.add(this.classNameActive);
@@ -35,8 +41,28 @@ export default class Products implements CatalogInterface {
         }
     }
 
+    addProduct(id: string) {
+      localStorage.setItem(id, '1');
+    }
+
     render(): void {
-        const productsStore = localStorageUtil.getProd();
+
+      const rootElement: HTMLElement = document.getElementById('products-container');
+      //console.log(rootElement);
+      CATALOG.forEach(elem => {
+        const product = document.createElement('div');
+        product.classList.add('products-element');
+        const card = new Card(elem);
+        product.innerHTML = card.template;
+        rootElement.appendChild(product);
+        const addButton = rootElement.querySelector('.button-add');
+        //console.log(addButton);
+
+        addButton.addEventListener('click', this.addProduct.bind(this, card.id));
+      })
+
+/*() => this.addProduct(card.id)*/
+        /*const productsStore = this.localStorageUtil.getProd();
         let htmlCatalog = '';
 
         const rootElement: HTMLElement = document.getElementById('root');
@@ -74,6 +100,6 @@ export default class Products implements CatalogInterface {
             ${htmlCatalog}
           </div>`;
 
-        rootElement.innerHTML = html;
+        rootElement.innerHTML = html;*/
     }
 }

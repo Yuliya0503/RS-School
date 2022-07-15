@@ -1,3 +1,4 @@
+import { CATALOG } from '../catalog/catalog';
 import { CatalogInterface } from '../helpers/interfaces';
 
 export default class LocalStorage {
@@ -17,6 +18,13 @@ export default class LocalStorage {
         return [];
     }
     //добавляем значение в локальное хранилище
+
+    setProducts() {
+      localStorage.setItem(this.keyName, JSON.stringify(CATALOG))
+    }
+    addProduct(id: string) {
+      localStorage.setItem(id, '1');
+    }
 
     public putProducts(id: CatalogInterface['id']): { pushProduct: boolean; products: string[] } {
         const products: string[] = this.getProd();
