@@ -1,4 +1,4 @@
-gexport default class Sorting {
+export default class Sorting {
 
   sortQuantity() {
     let productsContainer = document.querySelector('.products-container');
