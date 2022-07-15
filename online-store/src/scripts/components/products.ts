@@ -52,7 +52,7 @@ export default class Products implements CatalogInterface {
             }
 
             htmlCatalog += `
-            <div class="products-element" data-quantity="${quantity}">
+            <div class="products-element" data-quantity="${quantity}" data-year="${year}" data-name="${name}">
               <h4 class="products-element__name">${name}</h4>
               <div class="products-element__img">
                 <img src="${img}" alt="${name}">
