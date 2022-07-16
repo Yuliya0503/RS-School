@@ -1,29 +1,7 @@
 import { CATALOG } from '../catalog/catalog';
-import { CatalogInterface, ICard } from '../helpers/interfaces';
-import LocalStorage from '../localStorage/localStorage';
 import { Card } from './card';
 
-export default class Products implements CatalogInterface {
-    id: string;
-    name: string;
-    img: string;
-    quantity: string;
-    year: string;
-    cover: string;
-    genre: string;
-    publishingHouse: string;
-    favorite: boolean;
-    classNameActive: string;
-    labelAdd: string;
-    labelRemove: string;
-    localStorageUtil = new LocalStorage();
-    card: ICard;
-
-    constructor() {
-        this.classNameActive = 'products-element__button_active';
-        this.labelAdd = 'Добавить в корзину';
-        this.labelRemove = 'Удалить из корзины';
-    }
+export default class Products {
 
     addProduct(id: string) {
         const count = localStorage.getItem(id);
