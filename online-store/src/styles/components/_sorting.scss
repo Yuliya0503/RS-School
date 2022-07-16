@@ -1,9 +1,15 @@
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 45px;
+  width: 80%;
+  margin: auto;
+}
 .sorting {
   background-color: rgba($color: #6b6464, $alpha: 0.6);
   border: #bdb7b7 solid 2px;
   border-radius: 16px;
   backdrop-filter: blur(3px);
-  width: 700px;
   margin: auto;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -21,7 +27,7 @@
     align-items:center;
     flex-wrap: nowrap;
     box-sizing: border-box;
-    padding-left: 40px;
+    padding-left: 10px;
   }
 
   &-button {
