@@ -1,5 +1,4 @@
 import { CATALOG } from '../catalog/catalog';
-import { CatalogInterface } from '../helpers/interfaces';
 
 export default class LocalStorage {
     public keyName: string;
@@ -8,8 +7,6 @@ export default class LocalStorage {
         this.keyName = 'products';
     }
 
-    //получаем продукты из локального хранилища
-
     public getProd(): string[] {
         const productsLocalStorage: string = localStorage.getItem(this.keyName);
         if (productsLocalStorage !== null) {
@@ -17,29 +14,12 @@ export default class LocalStorage {
         }
         return [];
     }
-    //добавляем значение в локальное хранилище
 
     setProducts() {
-      localStorage.setItem(this.keyName, JSON.stringify(CATALOG))
+        localStorage.setItem(this.keyName, JSON.stringify(CATALOG));
     }
+
     addProduct(id: string) {
-      localStorage.setItem(id, '1');
-    }
-
-    public putProducts(id: CatalogInterface['id']): { pushProduct: boolean; products: string[] } {
-        const products: string[] = this.getProd();
-        let pushProduct = false;
-        const index: number = products.indexOf(id);
-
-        if (index === -1) {
-            products.push(id);
-            pushProduct = true;
-        } else {
-            products.splice(index, 1);
-        }
-
-        localStorage.setItem(this.keyName, JSON.stringify(products));
-
-        return { pushProduct, products };
+        localStorage.setItem(id, '1');
     }
 }

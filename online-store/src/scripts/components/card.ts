@@ -1,31 +1,31 @@
-import { ICard } from "../helpers/interfaces";
+import { ICard } from '../helpers/interfaces';
 
 export class Card {
-  id: string;
-  name: string;
-  img: string;
-  quantity: string;
-  year: string;
-  cover: string;
-  genre: string;
-  publishingHouse: string;
-  favorite: boolean;
-  addClickCounter: number;
-  template: string;
+    id: string;
+    name: string;
+    img: string;
+    quantity: string;
+    year: string;
+    cover: string;
+    genre: string;
+    publishingHouse: string;
+    favorite: boolean;
+    addClickCounter: number;
+    template: string;
 
-  constructor(card: ICard) {
-      this.id = card.id;
-      this.name = card.name;
-      this.img = card.img;
-      this.quantity = card.quantity;
-      this.year = card.year;
-      this.cover = card.cover;
-      this.genre = card.genre;
-      this.publishingHouse = card.publishingHouse;
-      this.favorite = card.favorite;
-      this.addClickCounter = 0;
+    constructor(card: ICard) {
+        this.id = card.id;
+        this.name = card.name;
+        this.img = card.img;
+        this.quantity = card.quantity;
+        this.year = card.year;
+        this.cover = card.cover;
+        this.genre = card.genre;
+        this.publishingHouse = card.publishingHouse;
+        this.favorite = card.favorite;
+        this.addClickCounter = 0;
 
-      this.template = `
+        this.template = `
         <h4 class="products-element__name">${this.name}</h4>
         <div class="products-element__img">
           <img src="${this.img}" alt="${this.name}">
@@ -41,5 +41,5 @@ export class Card {
         <button class="products-element__button button-add button">Добавить</button>
         <button class="products-element__button button-remove button">Удалить</button>
        `;
-  }
+    }
 }

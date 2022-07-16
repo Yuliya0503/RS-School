@@ -13,4 +13,3 @@ productsPage.render();
 
 const sort = new Sorting();
 sort.init();
-
