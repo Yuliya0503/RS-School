@@ -1,4 +1,4 @@
-import { CATALOG } from '../catalog/catalog';
+//import { CATALOG } from '../catalog/catalog';
 
 export default class LocalStorage {
     public keyName: string;
@@ -15,9 +15,9 @@ export default class LocalStorage {
         return [];
     }
 
-    setProducts() {
+    /*setProducts() {
         localStorage.setItem(this.keyName, JSON.stringify(CATALOG));
-    }
+    }*/
 
     addProduct(id: string) {
         localStorage.setItem(id, '1');

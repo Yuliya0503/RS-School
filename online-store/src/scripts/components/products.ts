@@ -2,7 +2,6 @@ import { CATALOG } from '../catalog/catalog';
 import { Card } from './card';
 
 export default class Products {
-
     addProduct(id: string) {
         const count = localStorage.getItem(id);
         if (count) {
@@ -33,7 +32,9 @@ export default class Products {
             const removeButton = product.querySelector('.button-remove');
             addButton.addEventListener('click', this.addProduct.bind(this, card.id));
             removeButton.addEventListener('click', this.removeProduct.bind(this, card.id));
+            product.setAttribute('data-quantity', `${card.quantity}`);
+            product.setAttribute('data-year', `${card.year}`);
+            product.setAttribute('data-name', `${card.name}`);
         });
-        //data-quantity="${quantity}" data-year="${year}" data-name="${name}
     }
 }

@@ -6,7 +6,7 @@ import Sorting from './scripts/components/sorting';
 
 const localStorage = new LocalStorage();
 localStorage.getProd();
-localStorage.setProducts();
+//localStorage.setProducts();
 
 const productsPage = new Products();
 productsPage.render();

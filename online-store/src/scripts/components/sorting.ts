@@ -1,6 +1,6 @@
 export default class Sorting {
     sortUpNum(sortType: string): void {
-        const productsContainer: Element = document.querySelector('.products-container');
+        const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
                 if (
@@ -18,7 +18,7 @@ export default class Sorting {
     }
 
     sortUpStr(sortType: string): void {
-        const productsContainer: Element = document.querySelector('.products-container');
+        const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
                 if (
@@ -36,7 +36,7 @@ export default class Sorting {
     }
 
     sortDownNum(sortType: string): void {
-        const productsContainer: Element = document.querySelector('.products-container');
+        const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
                 if (
@@ -54,7 +54,7 @@ export default class Sorting {
     }
 
     sortDownStr(sortType: string): void {
-        const productsContainer: Element = document.querySelector('.products-container');
+        const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
                 if (
@@ -73,22 +73,22 @@ export default class Sorting {
 
     init(): void {
         const quantityUp: HTMLElement = document.querySelector('#quantity-up');
-        quantityUp.onclick = () => this.sortUpNum('data-quantity');
+        quantityUp.addEventListener('click', this.sortUpNum.bind(this, 'data-quantity'));
 
         const quantityDown: HTMLElement = document.querySelector('#quantity-down');
-        quantityDown.onclick = () => this.sortDownNum('data-quantity');
+        quantityDown.addEventListener('click', this.sortDownNum.bind(this, 'data-quantity'));
 
         const yearUp: HTMLElement = document.querySelector('#year-up');
-        yearUp.onclick = () => this.sortUpNum('data-year');
+        yearUp.addEventListener('click', this.sortUpNum.bind(this, 'data-year'));
 
         const yearDown: HTMLElement = document.querySelector('#year-down');
-        yearDown.onclick = () => this.sortDownNum('data-year');
+        yearDown.addEventListener('click', this.sortDownNum.bind(this, 'data-year'));
 
         const nameAZ: HTMLElement = document.querySelector('#name-A-Z');
-        nameAZ.onclick = () => this.sortUpStr('data-name');
+        nameAZ.addEventListener('click', this.sortUpStr.bind(this, 'data-name'));
 
         const nameZA: HTMLElement = document.querySelector('#name-Z-A');
-        nameZA.onclick = () => this.sortDownStr('data-name');
+        nameZA.addEventListener('click', this.sortDownStr.bind(this, 'data-name'));
     }
 }
 
