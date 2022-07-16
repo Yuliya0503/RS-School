@@ -1,0 +1,47 @@
+.sorting {
+  background-color: rgba($color: #6b6464, $alpha: 0.6);
+  border: #bdb7b7 solid 2px;
+  border-radius: 16px;
+  backdrop-filter: blur(3px);
+  width: 700px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  &-title {
+    color: #d1caca;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    padding-left: 40px;
+  }
+
+  &-button {
+    margin-bottom: 15px;
+    width: 170px;
+    height: 50px;
+    border-radius: 15px;
+    border:#ffffff solid 1px;
+    cursor: pointer;
+    transition: 0.7s;
+
+
+    &:hover {
+      background-color: #f3e9d4;
+    }
+
+    &:active {
+      background-color: #f4cd95;
+      border: none;
+      width: 180px;
+    }
+  }
+}
