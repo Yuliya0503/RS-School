@@ -43,13 +43,26 @@
         </div>
       </section>
     </div>
-    <section class="sorting filter-wrapper">
+    <section class="sorting filter__wrapper">
       <div class="filter" id="publishingHouse">
-        <h3 class="title-filter">По издательству:</h3>
-        <button class="filter-button" data-id="АСТ">АСТ</button>
-        <button class="filter-button" data-id="Азбука">Азбука</button>
-        <button class="filter-button" data-id="Эксмо">Эксмо</button>
-        <button class="filter-button" data-id="МИФ">МИФ</button>
+        <h3 class="title__filter">По издательству:</h3>
+        <button class="filter-publishingHouse filter__btn" data-id="АСТ">АСТ</button>
+        <button class="filter-publishingHouse filter__btn" data-id="Азбука">Азбука</button>
+        <button class="filter-publishingHouse filter__btn" data-id="Эксмо">Эксмо</button>
+        <button class="filter-publishingHouse filter__btn" data-id="МИФ">МИФ</button>
+      </div>
+      <div class="filter" id="cover">
+        <h3 class="title__filter">Переплет:</h3>
+        <button class="filter__btn filter__btn_cover filter-cover" data-id="твердый">твердый</button>
+        <button class="filter__btn filter__btn_cover filter-cover" data-id="мягкий">мягкий</button>
+      </div>
+      <div class="filter" id="genre">
+        <h3 class="title__filter">По жанру:</h3>
+        <button class="filter__btn filter-genre" data-id="nonfiction">nonfiction</button>
+        <button class="filter__btn filter-genre" data-id="classic">classic</button>
+        <button class="filter__btn filter-genre" data-id="fantasy">fantasy</button>
+        <button class="filter__btn filter-genre" data-id="horror">horror</button>
+        <button class="filter__btn filter-genre" data-id="detective">detective</button>
       </div>
     </section>
     <div id="products-container">

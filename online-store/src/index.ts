@@ -17,7 +17,9 @@ const sort = new Sorting();
 sort.init();
 
 const filter = new Filter();
-filter.app();
+filter.filterPublishingHouse();
+filter.filterCover();
+filter.filterGenre();
 
 const input = new Input();
 input.filter();

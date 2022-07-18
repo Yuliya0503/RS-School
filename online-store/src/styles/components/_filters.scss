@@ -7,33 +7,39 @@
   box-sizing: border-box;
   padding-left: 10px;
 
-  &-button {
+  &__btn {
     margin: 5px 10px;
-    width: 100px;
+    width: 150px;
     height: 40px;
     border-radius: 15px;
     border:#ffffff solid 1px;
     cursor: pointer;
     transition: 0.7s;
 
+    &:active {
+      background-color: #f4cd95;
+      border: none;
+    }
+
+
+    &_cover {
+      width: 350px;
+    }
+
     &:hover {
       background-color: #f3e9d4;
     }
 
-    &:active {
-      background-color: #f4cd95;
-      border: none;
-      width: 150px;
-    }
 
   }
 
-  &-wrapper {
+  &__wrapper {
     width: 80%;
   }
 
 }
 
-.title-filter {
+.title__filter {
   color: #d1caca;
+  width: 300px;
 }
