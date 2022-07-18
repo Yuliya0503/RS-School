@@ -22,6 +22,13 @@ export default class Products {
 
     render(): void {
         const rootElement: HTMLElement = document.getElementById('products-container');
+        let count = 0;
+        let countElement = document.querySelector('.count');
+        const fineElement = document.querySelector('.fine');
+        const returnToShop = document.querySelector('.ok');
+        returnToShop.addEventListener('click', ()=>
+          {(fineElement.classList.add ('modal'))});
+        console.log(count);
         CATALOG.forEach((elem) => {
             const product = document.createElement('div');
             product.classList.add('products-element');
@@ -34,7 +41,22 @@ export default class Products {
             const addButton = product.querySelector('.button-add');
             const removeButton = product.querySelector('.button-remove');
             addButton.addEventListener('click', this.addProduct.bind(this, card.id));
+            addButton.addEventListener('click', () =>{
+              addButton.classList.add('active');
+              if (count < 20) {
+                count +=  1;
+                countElement.innerHTML = count.toString();
+              } else {
+                fineElement.classList.remove ('modal');
+              }
+
+            });
             removeButton.addEventListener('click', this.removeProduct.bind(this, card.id));
+            removeButton.addEventListener('click', () =>{
+              addButton.classList.remove('active');
+              count -= 1;
+              countElement.innerHTML = count.toString();
+            });
             product.setAttribute('data-quantity', `${card.quantity}`);
             product.setAttribute('data-year', `${card.year}`);
             product.setAttribute('data-name', `${card.name}`);
