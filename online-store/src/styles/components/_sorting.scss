@@ -2,10 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 0.9fr));
   gap: 45px;
-  width: 80%;
+  width: 90%;
   margin: auto;
   justify-content: center;
 }
+
 .sorting {
   background-color: rgba($color: #6b6464, $alpha: 0.6);
   border: #bdb7b7 solid 2px;
@@ -32,7 +33,7 @@
   }
 
   &-button {
-    margin-bottom: 15px;
+    margin: 0 10px 15px 10px;
     width: 170px;
     height: 50px;
     border-radius: 15px;
