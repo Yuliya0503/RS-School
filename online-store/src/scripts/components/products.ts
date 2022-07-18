@@ -54,7 +54,11 @@ export default class Products {
             removeButton.addEventListener('click', this.removeProduct.bind(this, card.id));
             removeButton.addEventListener('click', () => {
                 addButton.classList.remove('active');
-                count -= 1;
+                if (count > 1) {
+                  count -= 1;
+                } else {
+                  count = 0;
+                }
                 countElement.innerHTML = count.toString();
             });
             product.setAttribute('data-quantity', `${card.quantity}`);
