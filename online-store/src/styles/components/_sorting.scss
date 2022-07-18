@@ -1,9 +1,10 @@
 .filters {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 0.9fr));
   gap: 45px;
   width: 80%;
   margin: auto;
+  justify-content: center;
 }
 .sorting {
   background-color: rgba($color: #6b6464, $alpha: 0.6);

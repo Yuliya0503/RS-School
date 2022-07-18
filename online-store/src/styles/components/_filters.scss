@@ -1,0 +1,39 @@
+.filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: nowrap;
+  box-sizing: border-box;
+  padding-left: 10px;
+
+  &-button {
+    margin: 5px 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border:#ffffff solid 1px;
+    cursor: pointer;
+    transition: 0.7s;
+
+    &:hover {
+      background-color: #f3e9d4;
+    }
+
+    &:active {
+      background-color: #f4cd95;
+      border: none;
+      width: 150px;
+    }
+
+  }
+
+  &-wrapper {
+    width: 80%;
+  }
+
+}
+
+.title-filter {
+  color: #d1caca;
+}
