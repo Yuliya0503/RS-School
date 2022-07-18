@@ -7,7 +7,7 @@ export const CATALOG = [
         year: '2020',
         cover: 'твердый',
         genre: 'nonfiction',
-        publishingHouse: 'Синдбад',
+        publishingHouse: 'МИФ',
         favorite: true,
     },
 
@@ -55,7 +55,7 @@ export const CATALOG = [
         year: '2021',
         cover: 'твердый',
         genre: 'nonfiction',
-        publishingHouse: 'БОМБОРА',
+        publishingHouse: 'МИФ',
         favorite: false,
     },
 
@@ -67,7 +67,7 @@ export const CATALOG = [
         year: '2018',
         cover: 'твердый',
         genre: 'classic',
-        publishingHouse: 'RUGRAM',
+        publishingHouse: 'Эксмо',
         favorite: false,
     },
 
@@ -223,7 +223,7 @@ export const CATALOG = [
         year: '2022',
         cover: 'твердый',
         genre: 'horror',
-        publishingHouse: 'Fanzon',
+        publishingHouse: 'ACT',
         favorite: false,
     },
 

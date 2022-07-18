@@ -6,7 +6,6 @@ import Sorting from './scripts/components/sorting';
 import Filter from './scripts/components/filters';
 import Input from './scripts/components/input';
 
-
 const localStorage = new LocalStorage();
 localStorage.getProd();
 //localStorage.setProducts();
@@ -18,7 +17,7 @@ const sort = new Sorting();
 sort.init();
 
 const filter = new Filter();
-filter.init();
+filter.app();
 
 const input = new Input();
 input.filter();

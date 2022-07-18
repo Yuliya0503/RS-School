@@ -35,7 +35,7 @@ export class Card {
           <li class="products-element__description_year">Год издания: ${this.year}</li>
           <li class="products-element__description_cover">Переплет: ${this.cover}</li>
           <li class="products-element__description_genre">Жанр: ${this.genre}</li>
-          <li class="products-element__description_publishingHouse">Издательство: ${this.publishingHouse}</li>
+          <li class="products-element__description_publishingHouse publishingHouse">Издательство: ${this.publishingHouse}</li>
           <li class="products-element__description_favorite">Популярность: ${this.favorite} </li>
         </ul>
         <button class="products-element__button button-add button">Добавить</button>

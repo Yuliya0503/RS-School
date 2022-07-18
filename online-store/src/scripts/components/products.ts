@@ -26,6 +26,7 @@ export default class Products {
             const product = document.createElement('div');
             product.classList.add('products-element');
             const card = new Card(elem);
+            product.classList.add(`${card.publishingHouse}`);
             product.innerHTML = card.template;
             rootElement.appendChild(product);
             const addButton = product.querySelector('.button-add');
