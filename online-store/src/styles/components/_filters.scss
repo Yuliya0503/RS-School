@@ -21,7 +21,6 @@
       border: none;
     }
 
-
     &_cover {
       width: 350px;
     }
@@ -29,17 +28,18 @@
     &:hover {
       background-color: #f3e9d4;
     }
-
-
   }
 
   &__wrapper {
     width: 80%;
   }
-
 }
 
 .title__filter {
   color: #d1caca;
   width: 300px;
+}
+
+.filter-genre {
+  width: 110px;
 }

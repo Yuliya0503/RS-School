@@ -5,7 +5,6 @@ export default class Filter {
     cards: NodeListOf<HTMLElement> = document.querySelectorAll('.products-element');
     hiden: NodeListOf<HTMLElement> = document.querySelectorAll('.hide');
 
-
     filter(category: string, items: NodeListOf<HTMLElement>) {
         items.forEach((item) => {
             //const isShowAll = category.toLowerCase() === 'reset';
@@ -24,37 +23,36 @@ export default class Filter {
                 const currentCategory = button.dataset.id;
                 this.filter(currentCategory, this.cards);
             });
-            button.addEventListener('click', () =>{
-              this.publishingHouse.forEach(element => element.classList.remove('active'));
-              button.classList.add('active');
-            })
+            button.addEventListener('click', () => {
+                this.publishingHouse.forEach((element) => element.classList.remove('active'));
+                button.classList.add('active');
+            });
         });
     }
 
     filterCover() {
-      this.cover.forEach((button)=> {
-        button.addEventListener('click', () => {
-          const currentCategory = button.dataset.id;
-          this.filter(currentCategory, this.cards);
+        this.cover.forEach((button) => {
+            button.addEventListener('click', () => {
+                const currentCategory = button.dataset.id;
+                this.filter(currentCategory, this.cards);
+            });
+            button.addEventListener('click', () => {
+                this.cover.forEach((element) => element.classList.remove('active'));
+                button.classList.add('active');
+            });
         });
-        button.addEventListener('click', () =>{
-          this.cover.forEach(element => element.classList.remove('active'));
-          button.classList.add('active');
-        })
-      })
     }
 
     filterGenre() {
-      this.genre.forEach((button)=> {
-        button.addEventListener('click', () => {
-          const currentCategory = button.dataset.id;
-          this.filter(currentCategory, this.cards);
+        this.genre.forEach((button) => {
+            button.addEventListener('click', () => {
+                const currentCategory = button.dataset.id;
+                this.filter(currentCategory, this.cards);
+            });
+            button.addEventListener('click', () => {
+                this.genre.forEach((element) => element.classList.remove('active'));
+                button.classList.add('active');
+            });
         });
-        button.addEventListener('click', () =>{
-          this.genre.forEach(element => element.classList.remove('active'));
-          button.classList.add('active');
-        })
-      })
     }
-
 }
