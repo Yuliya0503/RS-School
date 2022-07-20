@@ -8,7 +8,6 @@ import Input from './scripts/components/input';
 
 const localStorage = new LocalStorage();
 localStorage.getProd();
-//localStorage.setProducts();
 
 const productsPage = new Products();
 productsPage.render();
