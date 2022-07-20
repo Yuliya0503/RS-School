@@ -5,11 +5,10 @@ export default class Filter {
     cards: NodeListOf<HTMLElement> = document.querySelectorAll('.products-element');
     hiden: NodeListOf<HTMLElement> = document.querySelectorAll('.hide');
 
-    filter(category: string, items: NodeListOf<HTMLElement>) {
+    filter(category: string, items: NodeListOf<HTMLElement>): void {
         items.forEach((item) => {
-            //const isShowAll = category.toLowerCase() === 'reset';
             const isItemFiltered = !item.classList.contains(category);
-            if (isItemFiltered /* && !isSowAll*/) {
+            if (isItemFiltered) {
                 item.classList.add('hide');
             } else {
                 item.classList.remove('hide');
@@ -17,7 +16,7 @@ export default class Filter {
         });
     }
 
-    filterPublishingHouse() {
+    filterPublishingHouse(): void {
         this.publishingHouse.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;
@@ -30,7 +29,7 @@ export default class Filter {
         });
     }
 
-    filterCover() {
+    filterCover(): void {
         this.cover.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;
@@ -43,7 +42,7 @@ export default class Filter {
         });
     }
 
-    filterGenre() {
+    filterGenre(): void {
         this.genre.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;

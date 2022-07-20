@@ -3,7 +3,7 @@ import { Card } from './card';
 
 export default class Products {
     addProduct(id: string) {
-        const count = localStorage.getItem(id);
+        const count: string = localStorage.getItem(id);
         if (count) {
             localStorage[id] = (+count + 1).toString();
         } else {
@@ -12,7 +12,7 @@ export default class Products {
     }
 
     removeProduct(id: string) {
-        const count = localStorage.getItem(id);
+        const count: string = localStorage.getItem(id);
         if (+count > 1) {
             localStorage[id] = (+count - 1).toString();
         } else if (+count === 1) {
@@ -23,13 +23,12 @@ export default class Products {
     render(): void {
         const rootElement: HTMLElement = document.getElementById('products-container');
         let count = 0;
-        const countElement = document.querySelector('.count');
-        const fineElement = document.querySelector('.fine');
-        const returnToShop = document.querySelector('.ok');
+        const countElement: Element = document.querySelector('.count');
+        const fineElement: Element = document.querySelector('.fine');
+        const returnToShop: Element = document.querySelector('.ok');
         returnToShop.addEventListener('click', () => {
             fineElement.classList.add('modal');
         });
-        console.log(count);
         CATALOG.forEach((elem) => {
             const product = document.createElement('div');
             product.classList.add('products-element');
@@ -55,9 +54,9 @@ export default class Products {
             removeButton.addEventListener('click', () => {
                 addButton.classList.remove('active');
                 if (count > 1) {
-                  count -= 1;
+                    count -= 1;
                 } else {
-                  count = 0;
+                    count = 0;
                 }
                 countElement.innerHTML = count.toString();
             });

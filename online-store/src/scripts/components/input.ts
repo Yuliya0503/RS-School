@@ -1,7 +1,7 @@
 export default class Input {
-    filter() {
-        const input = document.getElementById('filter-input');
-        input.addEventListener('keyup', function () {
+    filter(): void {
+        const input: HTMLElement = document.getElementById('filter-input');
+        input.addEventListener('keyup', function (): void {
             const filter = (input as HTMLInputElement).value.toLowerCase(),
                 filterElements = document.querySelectorAll('.products-element__name');
             filterElements.forEach((item) => {

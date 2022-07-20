@@ -20,5 +20,4 @@ export interface ICard {
     genre: string;
     publishingHouse: string;
     favorite: boolean;
-    //addClickCounter: number;
 }
