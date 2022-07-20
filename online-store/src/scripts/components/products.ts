@@ -2,7 +2,7 @@ import { CATALOG } from '../catalog/catalog';
 import { Card } from './card';
 
 export default class Products {
-    addProduct(id: string) {
+    private addProduct(id: string) {
         const count: string = localStorage.getItem(id);
         if (count) {
             localStorage[id] = (+count + 1).toString();
@@ -11,7 +11,7 @@ export default class Products {
         }
     }
 
-    removeProduct(id: string) {
+    private removeProduct(id: string) {
         const count: string = localStorage.getItem(id);
         if (+count > 1) {
             localStorage[id] = (+count - 1).toString();
@@ -20,7 +20,7 @@ export default class Products {
         }
     }
 
-    render(): void {
+    public render(): void {
         const rootElement: HTMLElement = document.getElementById('products-container');
         let count = 0;
         const countElement: Element = document.querySelector('.count');

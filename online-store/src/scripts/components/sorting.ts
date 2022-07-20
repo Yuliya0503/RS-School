@@ -1,5 +1,5 @@
 export default class Sorting {
-    sortUpNum(sortType: string): void {
+    private sortUpNum(sortType: string): void {
         const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
@@ -17,7 +17,7 @@ export default class Sorting {
         }
     }
 
-    sortUpStr(sortType: string): void {
+    private sortUpStr(sortType: string): void {
         const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
@@ -35,7 +35,7 @@ export default class Sorting {
         }
     }
 
-    sortDownNum(sortType: string): void {
+    private sortDownNum(sortType: string): void {
         const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
@@ -53,7 +53,7 @@ export default class Sorting {
         }
     }
 
-    sortDownStr(sortType: string): void {
+    private sortDownStr(sortType: string): void {
         const productsContainer: Element = document.querySelector('#products-container');
         for (let i = 0; i < productsContainer.children.length; i++) {
             for (let j = i; j < productsContainer.children.length; j++) {
@@ -71,7 +71,7 @@ export default class Sorting {
         }
     }
 
-    init(): void {
+    public init(): void {
         const quantityUp: HTMLElement = document.querySelector('#quantity-up');
         quantityUp.addEventListener('click', this.sortUpNum.bind(this, 'data-quantity'));
 
@@ -92,6 +92,6 @@ export default class Sorting {
     }
 }
 
-function insertAfter(elem: Element, refElem: Element) {
+function insertAfter(elem: Element, refElem: Element): Element {
     return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
 }

@@ -1,17 +1,17 @@
 import { ICard } from '../helpers/interfaces';
 
 export class Card {
-    id: string;
-    name: string;
-    img: string;
-    quantity: string;
-    year: string;
-    cover: string;
-    genre: string;
-    publishingHouse: string;
-    favorite: boolean;
-    addClickCounter: number;
-    template: string;
+    public id: string;
+    public name: string;
+    public img: string;
+    public quantity: string;
+    public year: string;
+    public cover: string;
+    public genre: string;
+    public publishingHouse: string;
+    public favorite: boolean;
+    public addClickCounter: number;
+    public template: string;
 
     constructor(card: ICard) {
         this.id = card.id;

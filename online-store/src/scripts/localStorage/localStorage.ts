@@ -12,8 +12,4 @@ export default class LocalStorage {
         }
         return [];
     }
-
-    addProduct(id: string): void {
-        localStorage.setItem(id, '1');
-    }
 }

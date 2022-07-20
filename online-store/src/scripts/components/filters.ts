@@ -1,11 +1,10 @@
 export default class Filter {
-    publishingHouse: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-publishingHouse');
-    cover: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-cover');
-    genre: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-genre');
-    cards: NodeListOf<HTMLElement> = document.querySelectorAll('.products-element');
-    hiden: NodeListOf<HTMLElement> = document.querySelectorAll('.hide');
+    private publishingHouse: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-publishingHouse');
+    private cover: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-cover');
+    private genre: NodeListOf<HTMLElement> = document.querySelectorAll('.filter-genre');
+    private cards: NodeListOf<HTMLElement> = document.querySelectorAll('.products-element');
 
-    filter(category: string, items: NodeListOf<HTMLElement>): void {
+    private filter(category: string, items: NodeListOf<HTMLElement>): void {
         items.forEach((item) => {
             const isItemFiltered = !item.classList.contains(category);
             if (isItemFiltered) {
@@ -16,7 +15,7 @@ export default class Filter {
         });
     }
 
-    filterPublishingHouse(): void {
+    public filterPublishingHouse(): void {
         this.publishingHouse.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;
@@ -29,7 +28,7 @@ export default class Filter {
         });
     }
 
-    filterCover(): void {
+    public filterCover(): void {
         this.cover.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;
@@ -42,7 +41,7 @@ export default class Filter {
         });
     }
 
-    filterGenre(): void {
+    public filterGenre(): void {
         this.genre.forEach((button) => {
             button.addEventListener('click', () => {
                 const currentCategory = button.dataset.id;

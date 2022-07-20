@@ -1,5 +1,5 @@
 export default class Input {
-    filter(): void {
+    public filter(): void {
         const input: HTMLElement = document.getElementById('filter-input');
         input.addEventListener('keyup', function (): void {
             const filter = (input as HTMLInputElement).value.toLowerCase(),
