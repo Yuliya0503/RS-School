@@ -5,5 +5,5 @@ export interface ApiCars {
 
 export interface ICar {
     id: number;
-    carInformation: string;
+    carInformation?: string;
 }

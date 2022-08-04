@@ -3,8 +3,8 @@ import { ICar } from '../models/interfases';
 
 export default class Car {
     async getCar<T>(id: ICar['id']): Promise<T> {
-        const carResponse: Response = await fetch((`${garage}/${id}`), {
-          method: 'GET',
+        const carResponse: Response = await fetch(`${garage}/${id}`, {
+            method: 'GET',
         });
         return carResponse.json();
     }
