@@ -1,4 +1,10 @@
-console.log('hello!');
-import { getCars } from '../src/scripts/api/apiCars';
+/*console.log('hello!');
+import Car from './scripts/api/Car';
 
-console.log(getCars(0));
+const car = new Car();
+console.log(car.getCar(2));*/
+
+//import Engine from './scripts/api/Engine';
+import Winner from './scripts/api/Winner';
+const winner = new Winner();
+console.log(winner.getStatusWinner(1));

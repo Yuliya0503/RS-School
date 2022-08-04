@@ -6,4 +6,12 @@ export interface ApiCars {
 export interface ICar {
     id: number;
     carInformation?: string;
+    winInformation?: string;
+}
+
+export interface ApiWinners {
+    page: number;
+    limit: number;
+    sort: string;
+    order: string;
 }

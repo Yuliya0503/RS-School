@@ -17,12 +17,12 @@ export default class Engine {
     }
 
     async engineToDrive(id: ICar['id']): Promise<Response | boolean> {
-      const drive: Response = await fetch(`${engine}?id=${id}&status=drive`, {
-        method: 'PATCH',
-      }).catch();
-      if(drive.status === 200) {
-        return { ...await drive.json() };
-      }
-      return { success: false } as unknown as boolean;
+        const drive: Response = await fetch(`${engine}?id=${id}&status=drive`, {
+            method: 'PATCH',
+        }).catch();
+        if (drive.status === 200) {
+            return { ...(await drive.json()) };
+        }
+        return { success: false } as unknown as boolean;
     }
 }
