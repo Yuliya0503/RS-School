@@ -1,7 +1,7 @@
 import { winners } from './ApiLinks';
 import { ICar } from '../models/interfases';
 
-export default class Winner {
+export default class ApiWinner {
     async getWinner<T>(id: ICar['id']): Promise<T> {
         const winnerGet = await fetch(`${winners}/${id}`, {
             method: 'GET',
@@ -38,12 +38,32 @@ export default class Winner {
         return winDelete.json();
     }
 
-    async getStatusWinner(id:ICar['id']): Promise<number> {
-      const statusWinner: Response = await fetch(`${winners}/${id}`, {
-        method: 'GET',
-      });
-      return statusWinner.status;
+    async getStatusWinner(id: ICar['id']): Promise<number> {
+        const statusWinner: Response = await fetch(`${winners}/${id}`, {
+            method: 'GET',
+        });
+        return statusWinner.status;
     }
 
-}
+    async saveNumberWins(id: ICar['id'], time: ICar['time']) {
+        const statusWinner = await this.getStatusWinner(id);
 
+        if (statusWinner !== 404) {
+            const winner: ICar['winInformation'] = await this.getWinner(id);
+
+            const timeResult: number = time < winner.time ? time : winner.time;
+
+            await this.changeWinner(id, {
+                id,
+                wins: winner.wins + 1,
+                time: timeResult,
+            });
+        } else {
+            await this.createWinner<ICar['winInformation']>({
+                id,
+                wins: 1,
+                time,
+            });
+        }
+    }
+}

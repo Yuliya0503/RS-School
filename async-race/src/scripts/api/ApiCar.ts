@@ -1,7 +1,7 @@
 import { garage } from './ApiLinks';
 import { ICar } from '../models/interfases';
 
-export default class Car {
+export default class ApiCar {
     async getCar<T>(id: ICar['id']): Promise<T> {
         const carResponse: Response = await fetch(`${garage}/${id}`, {
             method: 'GET',

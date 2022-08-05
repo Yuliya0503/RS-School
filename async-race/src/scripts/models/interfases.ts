@@ -5,8 +5,9 @@ export interface ApiCars {
 
 export interface ICar {
     id: number;
-    carInformation?: string;
-    winInformation?: string;
+    carInformation?: { name: string; color: string; id?: number };
+    winInformation?: { id: number; wins: number; time: number };
+    time?: number;
 }
 
 export interface ApiWinners {

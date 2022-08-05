@@ -1,7 +1,7 @@
 import { engine } from './ApiLinks';
 import { ICar } from '../models/interfases';
 
-export default class Engine {
+export default class ApiEngine {
     async engineStart<T>(id: ICar['id']): Promise<T> {
         const engStart: Response = await fetch(`${engine}?id=${id}&status=started`, {
             method: 'PATCH',
