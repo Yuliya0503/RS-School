@@ -21,7 +21,7 @@ export class CreateInputsCar extends BaseComponents {
     this.apiWinner = new ApiWinner();
 
     this.nameCar = new Inputs(this.HTMLnode, ['car-create-input', 'input'], 'text', 'car name');
-    this.colorCar = new Inputs(this.HTMLnode, ['car-color-input', 'input'], 'color', '');
+    this.colorCar = new Inputs(this.HTMLnode, ['color-input', 'input'], 'color', '');
     this.createCarBtn = new Button(this.HTMLnode, ['car-color-btn', 'button'], 'create');
 
   }

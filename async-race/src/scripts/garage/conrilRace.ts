@@ -10,8 +10,8 @@ export class ControlRace extends BaseComponents {
 
   constructor(parentNode: HTMLElement) {
     super(parentNode, 'div', ['control-race']);
-    this.race = new Button(this.HTMLnode, ['race-button', 'button'], 'race');
-    this.reset = new Button(this.HTMLnode, ['reset-button', 'button'], 'reset');
+    this.race = new Button(this.HTMLnode, ['race-button'], 'race');
+    this.reset = new Button(this.HTMLnode, ['reset-button'], 'reset');
     this.race.onClick = async () => {
       this.onStartCars();
     };

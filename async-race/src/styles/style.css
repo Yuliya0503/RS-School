@@ -11,12 +11,13 @@ input {
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #e35eae4d;
   font-family: "Roboto";
   font-size: 14px;
 }
 
 .button {
+  margin: 5px 10px 0 10px;
   display: inline-block;
   padding: 3px 10px;
   cursor: pointer;
@@ -33,7 +34,7 @@ body {
 
 .button:hover {
   background-color: #868686;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button:active {
@@ -42,7 +43,7 @@ body {
 
 .button:disabled {
   background-color: #868686;
-  color: #fff;
+  color: #ffffff;
   box-shadow: none;
 }
 

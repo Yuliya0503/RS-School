@@ -1,5 +1,5 @@
 import { BaseComponents } from "../Base/BaseComponents";
-import './switchPages.scss'
+import './switchPages.css'
 
 export class SwitchPage extends BaseComponents {
   toGarage: BaseComponents;

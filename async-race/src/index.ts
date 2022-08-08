@@ -2,7 +2,7 @@ import ApiCar from "./scripts/api/ApiCar";
 import ApiEngine from "./scripts/api/ApiEngine";
 import ApiWinner from "./scripts/api/ApiWinner";
 import { App } from "./scripts/app/app";
-import './styles/style.scss';
+import './styles/style.css';
 
 //console.log('hello!');
 window.onload=()=>{

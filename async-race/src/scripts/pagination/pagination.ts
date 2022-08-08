@@ -1,5 +1,6 @@
 import { BaseComponents } from "../Base/BaseComponents";
 import { Button } from "../Base/Button";
+import './pagination.css';
 
 export class Pagination extends BaseComponents {
   prev: Button;

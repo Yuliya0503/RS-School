@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900");
 .main-garage {
   width: 100%;
 }
@@ -27,7 +28,7 @@
 }
 
 .input {
-  margin: 0 0 20px 0;
+  margin: 0 10px 3px 0;
   height: 24px;
   padding: 4px 10px;
   border-radius: 3px;
@@ -49,7 +50,7 @@
 .color-imput {
   width: 100%;
   max-width: 30px;
-  margin: 0 10px 0 0;
+  margin: 0;
   padding: 1px 0;
 }
 
@@ -58,47 +59,67 @@
 }
 
 .race-button {
-  margin: 0 20px 0 0;
+  margin: 0 20px 10px 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 90%;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
-  background-color: rgb(65, 223, 59);
-  color: rgb(0, 0, 0);
-  &:hover {
-    background-color: rgb(93, 207, 48);
-    color: rgb(53, 53, 53);
-  }
+  background-color: #55bb95;
+  color: #000000;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Roboto";
+}
+
+.race-button:hover {
+  background-color: #144b5a;
+  color: #cce1e3;
 }
 
 .reset-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  background-color: rgb(225, 235, 96);
+  background-color: #f64b9b;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.3);
   color: #000;
-  &:hover {
-    background-color: rgb(238, 250, 67);
-    color: rgb(53, 53, 53);
-  }
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Roboto";
+}
+
+.reset-button:hover {
+  background-color: #aa67b8;
+  color: #200325;
 }
 
 .create-cars-btn {
-  width: 70px;
-  height: 70px;
-  background-color: rgb(100, 182, 207);
+  width: 150px;
+  height: 30px;
+  background-color: #9b43a1;
   color: #000;
-  &:hover {
-    background-color: rgb(48, 165, 180);
-    color: rgb(53, 53, 53);
-  }
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: "Roboto";
+}
+
+.create-cars-btn:hover {
+  background-color: #0c444b;
+  color: #afc1c4;
+}
+
+.create-cars {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .pages-control {
@@ -150,11 +171,11 @@
   margin: 0 0 15px 0;
   font-size: 21px;
   font-weight: 800;
-  color: orangered;
+  color: #167f71;
 }
 
 .message-btn {
-  background-color: rgb(90, 206, 99);
+  background-color: #6f14a3;
   display: block;
   padding: 5px 20px;
   border: none;

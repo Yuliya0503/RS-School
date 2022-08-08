@@ -27,6 +27,6 @@ export class Winner extends BaseComponents {
     this.renderImg(color);
     this.name.HTMLnode.textContent = name;
     this.wins.HTMLnode.textContent = `${wins}`;
-    this.wins.HTMLnode.textContent = `${time}`;
+    this.time.HTMLnode.textContent = `${time}`;
   }
 }

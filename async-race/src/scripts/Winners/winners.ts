@@ -9,7 +9,7 @@ import { WinnersPage } from "./WinnersPage";
 import { WinnerTable } from "./WinnersTable";
 import { Winner } from "./winner";
 import { getWinners } from "../api/apiWinners";
-import './winners.scss';
+import './winners.css';
 
 export class Winners extends BaseComponents {
   apiCar: ApiCar;

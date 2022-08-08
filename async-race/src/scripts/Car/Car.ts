@@ -4,7 +4,7 @@ import { BaseComponents } from "../Base/BaseComponents";
 import { CarControls } from "../Car/ControlsForCar";
 import { ImageRender } from "../Car/ImageRender";
 import ApiEngine from "../api/ApiEngine";
-import './car.scss';
+import './car.css';
 
 export class Car extends BaseComponents {
   image: ImageRender;

@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(132, 252, 152);
+  background-color: #fc84d8;
   line-height: 28px;
   border-radius: 3px;
   text-transform: capitalize;
@@ -38,7 +38,7 @@
 .wins {
   border: none;
   outline: none;
-  background-color: rgb(132, 252, 152);
+  background-color: #fc84d8;
   text-transform: capitalize;
   font-weight: 700;
   cursor: pointer;
@@ -47,7 +47,7 @@
 .best-time {
   border: none;
   outline: none;
-  background-color: rgb(132, 252, 152);
+  background-color: #fc84d8;
   font-weight: 700;
   cursor: pointer;
 }
@@ -58,7 +58,7 @@
   max-width: 516px;
   margin: 0 auto;
   display: flex;
-  background-color: rgb(210, 248, 216);
+  background-color: #cc7de8;
   line-height: 28px;
   border-radius: 3px;
   text-transform: capitalize;
@@ -66,27 +66,58 @@
 }
 
 .win-number {
+  flex: 0 0 20px;
+  display: flex;
+}
+
+.winner-number {
   flex: 0 0 80px;
   display: flex;
 }
 
 .win-car {
+  flex: 0 0 30px;
+  display: flex;
+}
+
+.winner-car {
   flex: 0 0 107px;
   display: flex;
 }
 
 .win-name {
-  flex: 0 0 112px;
+  flex: 0 0 80px;
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: #fc84d8;
+  text-transform: capitalize;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.winner-name {
+  flex: 0 0 132px;
   display: flex;
   font-size: 9px;
 }
 
 .win-wins {
+  flex: 0 0 90px;
+  display: flex;
+}
+
+.winner-wins {
   flex: 0 0 110px;
   display: flex;
 }
 
 .win-time {
+  flex: 0 0 100px;
+  display: flex;
+}
+
+.winner-time {
   flex: 0 0 100px;
   display: flex;
 }

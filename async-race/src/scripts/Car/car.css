@@ -1,5 +1,6 @@
 .car {
   margin: 0 0 10px 0;
+  height: 90px;
   position: relative;
   padding: 3px 10px 5px;
   width: 100%;
@@ -14,11 +15,11 @@
 }
 
 .first-line-buttons {
-  margin: 0 0 5px 0;
+  margin: 0;
 }
 
 .select-car {
-  margin: 0 10px 0 0;
+  margin: 0  0 0;
 }
 
 .remove-car {
@@ -40,7 +41,7 @@
 .car-image-wrapper {
   position: absolute;
   bottom: -3px;
-  left: 7%;
+  left: 15%;
 }
 
 .car-image-wrapper.animate {
@@ -54,9 +55,9 @@
 
 @keyframes drive {
   0% {
-    left: 7%;
+    left: 15%;
   }
   100% {
-    left: 94%;
+    left: 90%;
   }
 }

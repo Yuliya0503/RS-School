@@ -11,7 +11,7 @@ import { ShowPageGarage } from "./showPageGarage";
 import { ISpeedAndDist, CarInf } from "../models/interfases";
 import { BaseComponents } from "../Base/BaseComponents";
 import { getCars } from "../api/apiCars";
-import './garage.scss';
+import './garage.css';
 
 export class Garage extends BaseComponents {
   apiCar: ApiCar;

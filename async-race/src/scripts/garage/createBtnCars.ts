@@ -6,6 +6,6 @@ export class CreateBtnCars extends BaseComponents {
 
   constructor(parentNode: HTMLElement) {
     super(parentNode, 'div', ['create-cars']);
-    this.createCars = new Button(this.HTMLnode, ['create-cars-btn', 'button'], 'create-cars');
+    this.createCars = new Button(this.HTMLnode, ['create-cars-btn', 'button'], 'create cars');
   }
 }
