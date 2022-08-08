@@ -23,7 +23,7 @@
       "no-debugger": "off",
       "no-console": 0,
 
-      "max-len": ["warn", { "code": 120 }],
+      "max-len": ["warn", { "code": 300 }],
       "class-methods-use-this": "off",
       "@typescript-eslint/no-explicit-any": "error"
   }

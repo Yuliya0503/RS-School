@@ -1,15 +1,14 @@
 import { garage } from './ApiLinks';
-import { CarInf,IAllCars } from '../models/interfases';
+import { CarInf, IAllCars } from '../models/interfases';
 
 export default class ApiCar {
-  async getCars(page: number, limit = 7): Promise<IAllCars> {
-    const res = await fetch(`${garage}?_page=${page}&_limit=${limit}`);
-    return {
-      items: await res.json(),
-      count: Number(res.headers.get('X-Total-Count')),
-    };
-  }
-
+    async getCars(page: number, limit = 7): Promise<IAllCars> {
+        const res = await fetch(`${garage}?_page=${page}&_limit=${limit}`);
+        return {
+            items: await res.json(),
+            count: Number(res.headers.get('X-Total-Count')),
+        };
+    }
 
     async getCar(id: number): Promise<CarInf> {
         const carResponse: Response = await fetch(`${garage}/${id}`, {

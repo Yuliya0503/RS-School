@@ -1,5 +1,5 @@
-export const ImageCar = (color:string)=> {
-  return `<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50px" height="40px"
+export const ImageCar = (color: string) => {
+    return `<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="50px" height="40px"
         viewBox="0 0 1280.000000 640.000000"
         preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0.000000,640.000000) scale(0.100000,-0.100000)"
@@ -28,5 +28,5 @@ export const ImageCar = (color:string)=> {
               27 -15z m3613 -342 c-13 -2 -35 -2 -50 0 -16 2 -5 4 22 4 28 0 40 -2 28 -4z"
          />
       </g>
-  </svg>`
-}
+  </svg>`;
+};

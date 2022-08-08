@@ -5,7 +5,7 @@ export default class ApiEngine {
         const engStart: Response = await fetch(`${engine}?id=${id}&status=started`, {
             method: 'PATCH',
         });
-        const start = await engStart.json()
+        const start = await engStart.json();
         return start;
     }
 

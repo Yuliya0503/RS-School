@@ -1,36 +1,40 @@
-import { BaseComponents } from "../Base/BaseComponents";
-import { Button } from "../Base/Button";
-import { Inputs } from "../Base/Inputs";
-import ApiCar from "../api/ApiCar";
-import ApiEngine from "../api/ApiEngine";
-import ApiWinner from "../api/ApiWinner";
+import { BaseComponents } from '../Base/BaseComponents';
+import { Button } from '../Base/Button';
+import { Inputs } from '../Base/Inputs';
+import ApiCar from '../api/ApiCar';
+import ApiEngine from '../api/ApiEngine';
+import ApiWinner from '../api/ApiWinner';
 
 export class CreateInputsCar extends BaseComponents {
-  colorCar: Inputs;
-  nameCar: Inputs;
-  createCarBtn: Button;
-  apiWinner: ApiWinner;
-  apiCar: ApiCar;
-  apiEngine: ApiEngine;
+    colorCar: Inputs;
 
-  constructor(parentNode: HTMLElement) {
-    super(parentNode, 'div', ['car-create']);
+    nameCar: Inputs;
 
-    this.apiCar = new ApiCar();
-    this.apiEngine = new ApiEngine();
-    this.apiWinner = new ApiWinner();
+    createCarBtn: Button;
 
-    this.nameCar = new Inputs(this.HTMLnode, ['car-create-input', 'input'], 'text', 'car name');
-    this.colorCar = new Inputs(this.HTMLnode, ['color-input', 'input'], 'color', '');
-    this.createCarBtn = new Button(this.HTMLnode, ['car-color-btn', 'button'], 'create');
+    apiWinner: ApiWinner;
 
-  }
+    apiCar: ApiCar;
 
-  clearColor(): void {
-    this.colorCar.input.value = '#000000';
-  }
+    apiEngine: ApiEngine;
 
-  clearName(): void {
-    this.nameCar.input.value = '';
-  }
+    constructor(parentNode: HTMLElement) {
+        super(parentNode, 'div', ['car-create']);
+
+        this.apiCar = new ApiCar();
+        this.apiEngine = new ApiEngine();
+        this.apiWinner = new ApiWinner();
+
+        this.nameCar = new Inputs(this.HTMLnode, ['car-create-input', 'input'], 'text', 'car name');
+        this.colorCar = new Inputs(this.HTMLnode, ['color-input', 'input'], 'color', '');
+        this.createCarBtn = new Button(this.HTMLnode, ['car-color-btn', 'button'], 'create');
+    }
+
+    clearColor(): void {
+        this.colorCar.input.value = '#000000';
+    }
+
+    clearName(): void {
+        this.nameCar.input.value = '';
+    }
 }

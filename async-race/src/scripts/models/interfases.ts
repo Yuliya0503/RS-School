@@ -11,36 +11,36 @@ export interface ApiWinners {
 }
 
 export interface ISpeedAndDist {
-  velocity: number;
-  distance: number;
-  name?: string;
+    velocity: number;
+    distance: number;
+    name?: string;
 }
 
 export interface CarInf {
-  name: string;
-  color: string;
-  id?: number;
+    name: string;
+    color: string;
+    id?: number;
 }
 
 export interface WinInf {
-  id: number;
-  wins?: number;
-  time: number;
+    id: number;
+    wins?: number;
+    time: number;
 }
 
 export interface IAllCars {
-  items: Array<CarInf>;
-  count: number;
+    items: Array<CarInf>;
+    count: number;
 }
 
 export interface IAllWinners {
-  items: Array<WinInf>;
-  count: number;
+    items: Array<WinInf>;
+    count: number;
 }
 
 export interface IWinAndCar {
-  wins?: number;
-  time: number;
-  car?: CarInf;
-  id: number;
+    wins?: number;
+    time: number;
+    car?: CarInf;
+    id: number;
 }

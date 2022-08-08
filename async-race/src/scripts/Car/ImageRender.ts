@@ -1,22 +1,23 @@
-import { ImageCar } from "./ImageCar";
-import { BaseComponents } from "../Base/BaseComponents";
+import { ImageCar } from './ImageCar';
+import { BaseComponents } from '../Base/BaseComponents';
 
 export class ImageRender extends BaseComponents {
-  carImage: BaseComponents;
-  carName: BaseComponents;
+    carImage: BaseComponents;
 
-  constructor(parentNode: HTMLElement) {
-    super(parentNode, 'div', ['car-image']);
+    carName: BaseComponents;
 
-    this.carName = new BaseComponents(this.HTMLnode, 'span', ['car-name']);
-    this.carImage = new BaseComponents(this.HTMLnode, 'div', ['car-image-wrapper']);
-  }
+    constructor(parentNode: HTMLElement) {
+        super(parentNode, 'div', ['car-image']);
 
-  renderCarName(name: string): void {
-    this.carName.HTMLnode.textContent = name;
-  }
+        this.carName = new BaseComponents(this.HTMLnode, 'span', ['car-name']);
+        this.carImage = new BaseComponents(this.HTMLnode, 'div', ['car-image-wrapper']);
+    }
 
-  renderCarImage(color: string): void {
-    this.carImage.HTMLnode.innerHTML = ImageCar(color);
-  }
+    renderCarName(name: string): void {
+        this.carName.HTMLnode.textContent = name;
+    }
+
+    renderCarImage(color: string): void {
+        this.carImage.HTMLnode.innerHTML = ImageCar(color);
+    }
 }
