@@ -1,8 +1,8 @@
 import { winners } from './ApiLinks';
-import { ApiWinners } from '../models/interfases';
+import {IAllWinners, IWinAndCar } from '../models/interfases';
+import ApiCar from './ApiCar';
 
-export async function getWinners(page: ApiWinners['page'], sort?: ApiWinners['sort'], order?: ApiWinners['order']) {
-    const limit: ApiWinners['limit'] = 10;
+export async function getWinners(page: number, limit = 10, sort: string, order: string): Promise<IAllWinners> {
     let sortWin;
     if (sort && order) {
         sortWin = `$_sort=${sort}&_order=${order}`;
@@ -10,8 +10,12 @@ export async function getWinners(page: ApiWinners['page'], sort?: ApiWinners['so
         sortWin = '';
     }
     const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${sortWin}`);
+    const items: Array<IWinAndCar> = await response.json();
+    const getCar = new ApiCar();
+
+
     return {
-        wins: response.json(), //--------------------------------------??????
-        count: response.headers.get('X-Total-Count'),
+      items: await Promise.all(items.map(async(winner)=> ({...winner, car: await getCar.getCar(winner.id) }))),
+      count: Number(response.headers.get('X-Total-Count'))
     };
 }

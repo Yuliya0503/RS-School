@@ -1,15 +1,35 @@
 import { winners } from './ApiLinks';
-import { ICar } from '../models/interfases';
+import { WinInf, IAllWinners, IWinAndCar } from '../models/interfases';
+import ApiCar from './ApiCar';
 
 export default class ApiWinner {
-    async getWinner<T>(id: ICar['id']): Promise<T> {
+
+  async getWinners(page: number, limit = 10, sort: string, order: string): Promise<IAllWinners> {
+    let sortWin;
+    if (sort && order) {
+        sortWin = `$_sort=${sort}&_order=${order}`;
+    } else {
+        sortWin = '';
+    }
+    const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${sortWin}`);
+    const items: Array<IWinAndCar> = await response.json();
+    const getCar = new ApiCar();
+
+
+    return {
+      items: await Promise.all(items.map(async(winner)=> ({...winner, car: await getCar.getCar(winner.id) }))),
+      count: Number(response.headers.get('X-Total-Count'))
+    };
+}
+
+    async getWinner(id: number): Promise<WinInf> {
         const winnerGet = await fetch(`${winners}/${id}`, {
             method: 'GET',
         });
-        return winnerGet.json();
+        return await winnerGet.json();
     }
 
-    async createWinner<T>(winInformation: ICar['winInformation']): Promise<T> {
+    async createWinner(winInformation: WinInf): Promise<WinInf> {
         const winCreate: Response = await fetch(winners, {
             headers: {
                 'Content-Type': 'application/json',
@@ -17,10 +37,10 @@ export default class ApiWinner {
             method: 'POST',
             body: JSON.stringify(winInformation),
         });
-        return winCreate.json();
+        return await winCreate.json();
     }
 
-    async changeWinner<T>(id: ICar['id'], winInformation: ICar['winInformation']): Promise<T> {
+    async changeWinner(id: number, winInformation: WinInf): Promise< WinInf> {
         const winChange: Response = await fetch(`${winners}/${id}`, {
             headers: {
                 'Content-Type': 'application/json',
@@ -28,42 +48,21 @@ export default class ApiWinner {
             method: 'PUT',
             body: JSON.stringify(winInformation),
         });
-        return winChange.json();
+        return await winChange.json();
     }
 
-    async deleteWinner<T>(id: ICar['id']): Promise<T> {
+    async deleteWinner(id: number): Promise<JSON> {
         const winDelete: Response = await fetch(`${winners}/${id}`, {
             method: 'DELETE',
         });
-        return winDelete.json();
+        return await winDelete.json();
     }
 
-    async getStatusWinner(id: ICar['id']): Promise<number> {
+    async getStatusWinner(id: number): Promise<number> {
         const statusWinner: Response = await fetch(`${winners}/${id}`, {
             method: 'GET',
         });
         return statusWinner.status;
     }
 
-    async saveNumberWins(id: ICar['id'], time: ICar['time']) {
-        const statusWinner = await this.getStatusWinner(id);
-
-        if (statusWinner !== 404) {
-            const winner: ICar['winInformation'] = await this.getWinner(id);
-
-            const timeResult: number = time < winner.time ? time : winner.time;
-
-            await this.changeWinner(id, {
-                id,
-                wins: winner.wins + 1,
-                time: timeResult,
-            });
-        } else {
-            await this.createWinner<ICar['winInformation']>({
-                id,
-                wins: 1,
-                time,
-            });
-        }
-    }
 }

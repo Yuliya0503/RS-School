@@ -1,10 +1,13 @@
-/*console.log('hello!');
-import Car from './scripts/api/Car';
+import ApiCar from "./scripts/api/ApiCar";
+import ApiEngine from "./scripts/api/ApiEngine";
+import ApiWinner from "./scripts/api/ApiWinner";
+import { App } from "./scripts/app/app";
+import './styles/style.scss';
 
-const car = new Car();
-console.log(car.getCar(2));*/
-
-//import Engine from './scripts/api/Engine';
-import Winner from './scripts/api/Winner';
-const winner = new Winner();
-console.log(winner.getStatusWinner(1));
+//console.log('hello!');
+window.onload=()=>{
+  new App(document.body);
+  new ApiCar();
+  new ApiEngine();
+  new ApiWinner();
+}

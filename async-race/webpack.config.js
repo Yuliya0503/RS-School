@@ -36,6 +36,9 @@ const baseConfig = {
   resolve: {
       extensions: ['.ts', '.js'],
   },
+  experiments: {
+    topLevelAwait: true,
+  },
   output: {
       filename: 'index.js',
       path: path.resolve(__dirname, './dist'),

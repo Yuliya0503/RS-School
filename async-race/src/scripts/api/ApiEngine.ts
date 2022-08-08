@@ -1,28 +1,26 @@
 import { engine } from './ApiLinks';
-import { ICar } from '../models/interfases';
 
 export default class ApiEngine {
-    async engineStart<T>(id: ICar['id']): Promise<T> {
+    async engineStart(id: number): Promise<{ velocity: number; distance: number }> {
         const engStart: Response = await fetch(`${engine}?id=${id}&status=started`, {
             method: 'PATCH',
         });
-        return engStart.json();
+        const start = await engStart.json()
+        return start;
     }
 
-    async engineStop<T>(id: ICar['id']): Promise<T> {
+    async engineStop(id: number): Promise<{ velocity: number; distance: number }> {
         const engStop: Response = await fetch(`${engine}?id=${id}&status=stopped`, {
             method: 'PATCH',
         });
-        return engStop.json();
+        const stop = await engStop.json();
+        return stop;
     }
 
-    async engineToDrive(id: ICar['id']): Promise<Response | boolean> {
+    async engineToDrive(id: number): Promise<number> {
         const drive: Response = await fetch(`${engine}?id=${id}&status=drive`, {
             method: 'PATCH',
         }).catch();
-        if (drive.status === 200) {
-            return { ...(await drive.json()) };
-        }
-        return { success: false } as unknown as boolean;
+        return drive.status;
     }
 }
