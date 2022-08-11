@@ -4,13 +4,13 @@ import ApiCar from './ApiCar';
 
 export default class ApiWinner {
     async getWinners(page: number, sort: string, order: string, limit = 10): Promise<IAllWinners> {
-        let sortWin;
+        let sortWin: string;
         if (sort && order) {
             sortWin = `$_sort=${sort}&_order=${order}`;
         } else {
             sortWin = '';
         }
-        const response = await fetch(`${winners}?_page=${page}&_limit=${limit}${sortWin}`);
+        const response: Response = await fetch(`${winners}?_page=${page}&_limit=${limit}${sortWin}`);
         const items: Array<IWinAndCar> = await response.json();
         const getCar = new ApiCar();
 
@@ -21,7 +21,7 @@ export default class ApiWinner {
     }
 
     async getWinner(id: number): Promise<WinInf> {
-        const winnerGet = await fetch(`${winners}/${id}`, {
+        const winnerGet: Response = await fetch(`${winners}/${id}`, {
             method: 'GET',
         });
         return winnerGet.json();

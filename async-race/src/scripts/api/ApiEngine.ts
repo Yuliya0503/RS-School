@@ -5,7 +5,7 @@ export default class ApiEngine {
         const engStart: Response = await fetch(`${engine}?id=${id}&status=started`, {
             method: 'PATCH',
         });
-        const start = await engStart.json();
+        const start: Promise<{ velocity: number; distance: number }> = await engStart.json();
         return start;
     }
 
@@ -13,7 +13,7 @@ export default class ApiEngine {
         const engStop: Response = await fetch(`${engine}?id=${id}&status=stopped`, {
             method: 'PATCH',
         });
-        const stop = await engStop.json();
+        const stop: Promise<{ velocity: number; distance: number }> = await engStop.json();
         return stop;
     }
 

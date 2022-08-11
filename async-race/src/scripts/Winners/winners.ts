@@ -60,26 +60,26 @@ export class Winners extends BaseComponents {
         this.countWnners = 0;
 
         this.winPage.setNumberPage(this.winnerPage);
-        this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+        this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
 
         this.pagination.next.onClick = () => {
             this.winPage.HTMLnode.textContent = `Page (${++this.winnerPage})`;
-            this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+            this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
         };
 
         this.pagination.prev.onClick = () => {
             this.winPage.HTMLnode.textContent = `Page (${--this.winnerPage})`;
-            this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+            this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
         };
 
         this.winsTable.wins.onClick = () => {
             this.sort = 'time';
             if (this.order === 'ASC') {
                 this.order = 'DESC';
-                this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+                this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
             } else if (this.order === 'DESC') {
                 this.order = 'ASC';
-                this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+                this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
             }
         };
 
@@ -87,10 +87,10 @@ export class Winners extends BaseComponents {
             this.sort = 'wins';
             if (this.order === 'ASC') {
                 this.order = 'DESC';
-                this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+                this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
             } else if (this.order === 'DESC') {
                 this.order = 'ASC';
-                this.getPageWinners(this.winnerPage, this.numWins, this.sort, this.order);
+                this.getPageWinners(this.winnerPage, this.sort, this.order, this.numWins);
             }
         };
     }
@@ -104,8 +104,8 @@ export class Winners extends BaseComponents {
         });
     }
 
-    async getPageWinners(page: number, limit: number, sort: string, order: string): Promise<void> {
-        const dataWins = await getWinners(page, limit, sort, order);
+    async getPageWinners(page: number, sort: string, order: string, limit: number): Promise<void> {
+        const dataWins = await getWinners(page, sort, order, limit);
         this.renderCars(dataWins.items);
         this.countWnners = dataWins.count;
         this.pagination.checkPuginationButtons(this.numWins, this.countWnners, this.winnerPage);

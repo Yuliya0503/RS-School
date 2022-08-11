@@ -3,7 +3,7 @@ import { CarInf, IAllCars } from '../models/interfases';
 
 export default class ApiCar {
     async getCars(page: number, limit = 7): Promise<IAllCars> {
-        const res = await fetch(`${garage}?_page=${page}&_limit=${limit}`);
+        const res: Response = await fetch(`${garage}?_page=${page}&_limit=${limit}`);
         return {
             items: await res.json(),
             count: Number(res.headers.get('X-Total-Count')),
@@ -36,7 +36,7 @@ export default class ApiCar {
             method: 'PUT',
             body: JSON.stringify(carInformation),
         });
-        const car = await carChange.json();
+        const car: Promise<JSON> = await carChange.json();
         return car;
     }
 
@@ -44,7 +44,7 @@ export default class ApiCar {
         const carDelete: Response = await fetch(`${garage}/${id}`, {
             method: 'DELETE',
         });
-        const car = await carDelete.json();
+        const car: Promise<JSON> = await carDelete.json();
         return car;
     }
 }

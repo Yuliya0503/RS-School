@@ -43,7 +43,7 @@ export class Car extends BaseComponents {
         const resultStart: ISpeedAndDist = await this.apiEngine.engineStart(id);
         const time: number = resultStart.distance / resultStart.velocity / 1000;
         await this.animateCar(time);
-        const status = await this.apiEngine.engineToDrive(id);
+        const status: number = await this.apiEngine.engineToDrive(id);
         const defValue: ISpeedAndDist = {
             velocity: 0,
             distance: 0,

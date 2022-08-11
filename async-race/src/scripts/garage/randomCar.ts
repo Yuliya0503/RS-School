@@ -79,8 +79,8 @@ export class RandomCars {
     ];
 
     createRandomName(): string {
-        const carBrand = this.cars[Math.floor(Math.random() * this.cars.length)];
-        const carModel = this.models[Math.floor(Math.random() * this.models.length)];
+        const carBrand: string = this.cars[Math.floor(Math.random() * this.cars.length)];
+        const carModel: string = this.models[Math.floor(Math.random() * this.models.length)];
         return `${carBrand} ${carModel}`;
     }
 

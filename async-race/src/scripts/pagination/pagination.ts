@@ -9,8 +9,8 @@ export class Pagination extends BaseComponents {
 
     constructor(parentNode: HTMLElement) {
         super(parentNode, 'div', ['pagination']);
-        this.next = new Button(this.HTMLnode, ['next-page', 'button'], 'next');
         this.prev = new Button(this.HTMLnode, ['prev-page', 'button'], 'prev');
+        this.next = new Button(this.HTMLnode, ['next-page', 'button'], 'next');
     }
 
     checkPuginationButtons(limit: number, count: number, page: number): void {

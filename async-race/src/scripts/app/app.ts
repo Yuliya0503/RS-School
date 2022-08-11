@@ -29,7 +29,7 @@ export class App {
         this.winners.hideElement();
         this.switches.addPage();
         this.switchPage.toWinners.HTMLnode.onclick = () => {
-            this.winners.getPageWinners(this.winners.winnerPage, this.winners.numWins, this.winners.sort, this.winners.order);
+            this.winners.getPageWinners(this.winners.winnerPage, this.winners.sort, this.winners.order, this.winners.numWins);
         };
     }
 }

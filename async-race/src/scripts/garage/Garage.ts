@@ -114,17 +114,17 @@ export class Garage extends BaseComponents {
         this.arrCars.forEach(async (car) => {
             arrayFunctionRace.push(car.startCar(car.details.id, car.details.name));
         });
-        const time = (await Promise.all(arrayFunctionRace)).map((item) => (item.velocity && item.distance ? item.distance / item.velocity / 1000 : 0));
-        const timeSorted = time.filter((item) => item !== 0).sort((a, b) => a - b);
-        const name = (await Promise.all(arrayFunctionRace)).filter((item) => item.distance / item.velocity / 1000 === timeSorted[0]).map((item) => item.name);
-        const winId = this.arrCars.filter((item) => item.details.name === name[0]).map((item) => item.details.id)[0];
+        const time: number[] = (await Promise.all(arrayFunctionRace)).map((item) => (item.velocity && item.distance ? item.distance / item.velocity / 1000 : 0));
+        const timeSorted: number[] = time.filter((item) => item !== 0).sort((a, b) => a - b);
+        const name: string[] = (await Promise.all(arrayFunctionRace)).filter((item) => item.distance / item.velocity / 1000 === timeSorted[0]).map((item) => item.name);
+        const winId: number = this.arrCars.filter((item) => item.details.name === name[0]).map((item) => item.details.id)[0];
         const bestTime = Number(timeSorted[0].toString().slice(0, 4));
         this.winnerMessage.showwinnerMessage(name[0], bestTime);
         this.checkWinner(winId, bestTime);
     }
 
     async checkWinner(id: number, time: number): Promise<void> {
-        const status = await this.apiWinner.getStatusWinner(id);
+        const status: number = await this.apiWinner.getStatusWinner(id);
         if (status === 404) {
             await this.apiWinner.createWinner({
                 id,

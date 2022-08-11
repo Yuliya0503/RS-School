@@ -4,7 +4,6 @@ import ApiWinner from './scripts/api/ApiWinner';
 import { App } from './scripts/app/app';
 import './styles/style.css';
 
-//console.log('hello!');
 window.onload = () => {
     new App(document.body);
     new ApiCar();

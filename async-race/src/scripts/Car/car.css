@@ -3,9 +3,9 @@
   height: 90px;
   position: relative;
   padding: 3px 10px 5px;
-  width: 100%;
+  width: 95%;
   display: flex;
-  background-color: #fff;
+  background-color: #ffffff;
   border-bottom: 1px solid #000;
 }
 
@@ -58,6 +58,6 @@
     left: 15%;
   }
   100% {
-    left: 90%;
+    left: 94%;
   }
 }
